@@ -3,6 +3,8 @@ class JobsController < ApplicationController
   
   def index
     @jobs = Job.all
+    @title = "Все работы"
+    respond_with(@jobs)
   end
   
   def show
