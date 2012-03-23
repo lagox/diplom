@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 Diplom::Application.routes.draw do
   resources :jobs
 
