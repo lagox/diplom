@@ -1,5 +1,7 @@
 # -*- encoding : utf-8 -*-
 Diplom::Application.routes.draw do
+  resources :categories
+
   resources :jobs
 
   # The priority is based upon order of creation:

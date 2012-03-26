@@ -1,6 +1,146 @@
+// Copyright Kussainov Yerlan. 2012
+body{
+  font: 16px Arial, "Times New Roman", sans-serif;
+  a{
+    color:#5E5E5E;
+  }
+}
 #wrapper{
-  width:1000px;
-  border:1px solid #ccc;
+  width:90%;
+  // border:1px solid #ccc;
   margin:0 auto;
   
+  // header
+  #header{
+    height:80px;
+    #site-title{
+      margin-top:30px;
+      margin-left:40px;
+      font-size:24px;
+      // border:1px solid #ccc;
+      a{
+        text-decoration:none;
+        &:hover{
+          color:#848484;
+        }
+      }
+    }
+    #auth-user{
+      position:relative;
+      float:right;
+      bottom:40px;
+      right:10px;
+      width:180px;
+      #login-link{
+        // background:#DCEFF2;
+        // -webkit-border-radius:5px 5px 0px 0px;
+        // -moz-border-radius:5px 5px 0px 0px;
+        // border-radius:5px 5px 0px 0px;
+        // -o-border-radius:5px 5px 0px 0px;
+        text-decoration: none;
+        font-size:12px;
+        display: block;
+        width:50px;
+        padding:5px 5px 5px 15px;
+        &:hover{
+          text-decoration:underline;
+        }
+      }
+      #signup-link{
+        margin-top:5px;
+        text-decoration:none;
+        margin-right:37px;
+        float:right;
+        font-size:12px;
+        &:hover{
+          text-decoration:underline;
+        }
+      }
+      .active-login-link{
+        background:#DCEFF2;
+      }
+      form{
+        position:absolute;
+        z-index:2;
+        display:none;
+        background:#DCEFF2;
+        padding:10px;
+        -webkit-border-radius:0px 0px 5px 5px;
+        -moz-border-radius:0px 0px 5px 5px;
+        border-radius:0px 0px 5px 5px;
+        -o-border-radius:0px 0px 5px 5px;
+        .a-username{
+          display: block;
+          margin-bottom:7px;
+        }
+        .a-password{
+          display: block;
+          margin-bottom:7px;
+        }
+        .a-submit{
+          display: block;
+        }    
+        input[type=text], input[type=password]{
+          border:none;
+          padding:2px;
+        }    
+      }
+
+    }
+  }
+  
+  // main content
+  #main-content{
+    // border:1px solid #ccc;
+    min-height:350px;
+    margin-top:5px;
+    margin-bottom:10px;
+    padding:5px;
+    width:100%;
+    #sidebar{
+      width:20%;
+      float:left;
+      // border:1px solid #ccc;
+      .title-category{
+        font-size:18px;
+        margin-bottom:5px;
+        color:#646464;
+      }
+      ul{
+        li{
+          margin:1px 2px 1px 4px;
+          a{
+            color:#898989;
+            font-size:12px;
+            &:hover{
+              color:#5C5C5C;
+              text-decoration:none;
+            }
+          }
+        }
+      }
+    }
+    #content{
+      float:left;
+      width:77%;
+      margin-left:30px;
+      // border:1px solid #ccc;
+    }
+  }
+  
+  // footer
+  #footer{
+    clear:both;
+    height:50px;
+    #copyright{
+      font-size:11px;
+      padding-top:20px;
+      margin-left:30px;
+    }
+  }
+  
+}
+
+.clear{
+  clear:both;
 }
