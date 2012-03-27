@@ -1,0 +1,9 @@
+<!-- sidebar -->
+<div id="sidebar">
+  <h1 class="title-category">Категории</h1>
+  <ul>
+    <% @list_categories.each do |c| %>
+      <li><%= link_to c.title, c %></li>
+    <% end %>
+  </ul>
+</div>
