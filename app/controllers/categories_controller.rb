@@ -4,7 +4,8 @@ class CategoriesController < ApplicationController
   respond_to :html
   
   def show
-    @jobs = Category.find(params[:id]).jobs
+    @category = Category.find(params[:id])
+    @jobs = @category.jobs
     respond_with(@jobs)
   end
   

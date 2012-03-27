@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
   def load_categories
     @list_categories = Category.all
     respond_with(@list_categories)
-  end
+  end  
   
 end
