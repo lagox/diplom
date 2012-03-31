@@ -5,9 +5,9 @@ class CategoriesController < ApplicationController
   
   def show
     @category = Category.find(params[:id])
-    @title = "sss"
-    # @jobs = @category.jobs
-    # respond_with(@jobs)
+    @jobs = @category.jobs
+    @title = @category.title
+    respond_with(@jobs)
   end
   
 end

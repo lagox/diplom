@@ -2,12 +2,7 @@
 module ApplicationHelper
   
   def title
-    base_title = 'Диплом'
-    if @title
-      "#{base_title} | #{@title}"
-    else
-      base_title
-    end
+    return @title if defined?(@title)
+    "Диплом"
   end
-  
 end
