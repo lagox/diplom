@@ -1,6 +1,7 @@
 # -*- encoding : utf-8 -*-
 Diplom::Application.routes.draw do
-  resources :categories
+  
+  resources :categories, :except => [:index]
 
   resources :jobs
 
