@@ -9,18 +9,20 @@
 <body>
   <div id="wrapper">
     <!-- header -->
-    <div id="header">
-      <h1 id="site-title"><a href="/">Des-Engine</a></h1>
-      <div id="auth-user">
-        <a href="#" id="signup-link">Регистрация</a>
-        <a href="#" id="login-link">Войти</a>
-        <form action="">
-          <input type="text" name="username" class="a-username" placeholder="логин">
-          <input type="password" name="password" class="a-password" placeholder="пароль">
-          <input type="submit" value="Войти" class="a-subit">
-        </form>
+    <header>
+      <div id="header">
+        <h1 id="site-title"><a href="/">Des-Engine</a></h1>
+        <div id="auth-user">
+          <a href="#" id="signup-link">Регистрация</a>
+          <a href="#" id="login-link">Войти</a>
+          <form action="">
+            <input type="text" name="username" class="a-username" placeholder="логин">
+            <input type="password" name="password" class="a-password" placeholder="пароль">
+            <input type="submit" value="Войти" class="a-subit">
+          </form>
+        </div>
       </div>
-    </div>
+    </header>
     <!-- main content -->
     <div id="main-content">
       <%= render 'layouts/sidebar' %>

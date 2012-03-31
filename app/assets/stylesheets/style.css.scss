@@ -4,39 +4,43 @@ body{
   a{
     color:#5E5E5E;
   }
+    background-image:url('/assets/bglines.png');
 }
 #wrapper{
   width:90%;
-  // border:1px solid #ccc;
+  border:1px solid #ccc;
+  background:#fff;
   margin:0 auto;
-  
   // header
+  header{
+    background-image:url('/assets/bglines.png');
+  }
   #header{
     height:80px;
+    background-color: rgba(0, 0, 0, 0.45);
+    
+    a{
+      color:#fff;
+    }
     #site-title{
-      margin-top:30px;
+      padding-top:20px;
       margin-left:40px;
       font-size:24px;
       // border:1px solid #ccc;
       a{
         text-decoration:none;
         &:hover{
-          color:#848484;
+          color:#EBEBEB;
         }
       }
     }
     #auth-user{
       position:relative;
       float:right;
-      bottom:40px;
+      bottom:25px;
       right:10px;
       width:180px;
       #login-link{
-        // background:#DCEFF2;
-        // -webkit-border-radius:5px 5px 0px 0px;
-        // -moz-border-radius:5px 5px 0px 0px;
-        // border-radius:5px 5px 0px 0px;
-        // -o-border-radius:5px 5px 0px 0px;
         text-decoration: none;
         font-size:12px;
         display: block;
@@ -57,13 +61,13 @@ body{
         }
       }
       .active-login-link{
-        background:#DCEFF2;
+        background:#DCE2CC;
       }
       form{
         position:absolute;
         z-index:2;
         display:none;
-        background:#DCEFF2;
+        background:#DCE2CC;
         padding:10px;
         -webkit-border-radius:0px 0px 5px 5px;
         -moz-border-radius:0px 0px 5px 5px;
@@ -98,9 +102,10 @@ body{
     padding:5px;
     width:100%;
     #sidebar{
-      width:20%;
+      width:19%;
       float:left;
-      // border:1px solid #ccc;
+      padding:10px 5px;
+      // border:1px solid #eee;
       .title-category{
         font-size:18px;
         margin-bottom:5px;
@@ -123,7 +128,7 @@ body{
     #content{
       float:left;
       width:75%;
-      margin-left:30px;
+      margin-left:15px;
       // border:1px solid #ccc;
       min-height:450px;
     }
@@ -133,6 +138,7 @@ body{
   #footer{
     clear:both;
     height:50px;
+    background:#F6F6F6;
     #copyright{
       font-size:11px;
       padding-top:20px;
