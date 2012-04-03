@@ -171,3 +171,29 @@ body{
 .clear{
   clear:both;
 }
+
+// alerts:
+.alert-success{
+  color:#7AC158;
+  font-size:11px;
+  padding:5px;
+  border:1px solid #CCF9A4;
+  background:#FCFCFC;
+}
+
+// errors:
+.errorExplanation{
+  border:1px solid #F1B297;
+  padding:5px;
+  font-size:11px;
+  color:#CC6859;
+  margin-bottom:20px;
+  background:#FCFCFC;
+  .error-title{
+    font-weight:bold;
+    margin-bottom:5px;
+  }
+  ul{
+    margin-left:10px;
+  }
+}
