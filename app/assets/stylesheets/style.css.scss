@@ -128,17 +128,18 @@ body{
       .upload-job{
         text-decoration:none;
         display:block;
-        padding:10px;
+        padding:8px;
         background:#CDE9C0;
         width:110px;
         color:#505050;
         margin-bottom:20px;
-        -webkit-border-radius:10px;
-        -moz-border-radius:10px;
-        border-radius:10px;
-        -o-border-radius:10px;
+        -webkit-border-radius:5px;
+        -moz-border-radius:5px;
+        border-radius:5px;
+        -o-border-radius:5px;
         &:hover{
-          color:#919191;
+          color:#fff;
+          background:#A5CB8C;
         }
       }
       // border:1px solid #eee;
