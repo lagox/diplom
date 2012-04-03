@@ -131,9 +131,19 @@ body{
         margin-bottom:5px;
         color:#646464;
       }
+      .content-sidebar{
+        margin:1px 2px 20px 4px;
+      }
+      a{
+        color:#898989;
+        font-size:12px;
+        &:hover{
+          color:#5C5C5C;
+          text-decoration:none;
+        }
+      }
       ul{
         li{
-          margin:1px 2px 1px 4px;
           a{
             color:#898989;
             font-size:12px;

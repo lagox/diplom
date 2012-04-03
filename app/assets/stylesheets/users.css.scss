@@ -1,3 +1,19 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#show-user{
+  border:1px solid #eee;
+  padding:10px;
+  font-size:12px;
+  .email-user{
+    margin-bottom:10px;
+  }
+  .created-at-user{
+    font-size:11px;
+  }
+}
+#all-users{
+  // border:1px solid #ccc;
+  padding:10px;
+  font-size:12px;
+  .user-l{
+    margin-bottom:7px;
+  }
+}
