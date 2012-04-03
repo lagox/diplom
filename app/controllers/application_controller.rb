@@ -7,6 +7,17 @@ class ApplicationController < ActionController::Base
   def load_categories
     @list_categories = Category.all
     @list_categories
-  end  
+  end
   
+  private
+  
+    def current_user
+      @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    end
+    
+    helper_method :current_user
+    
+    def authorize
+      redirect_to root_url, alert: "Войдите в систему" if current_user.nil?
+    end
 end

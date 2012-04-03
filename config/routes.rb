@@ -1,6 +1,12 @@
 # -*- encoding : utf-8 -*-
 Diplom::Application.routes.draw do
   
+  get 'signup', to: 'users#new', as: 'signup'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
+  
+  resources :users
+  resources :sessions
+
   resources :categories, :except => [:index]
 
   resources :jobs

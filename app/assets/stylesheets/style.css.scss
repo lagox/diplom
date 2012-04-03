@@ -40,6 +40,25 @@ body{
       bottom:25px;
       right:10px;
       width:180px;
+      #login-as{
+        font-size:11px;
+        margin-top:-10px;
+        color:#FBFBFB;
+        // border:1px solid #ccc;
+        margin-left:-30px;
+        a{
+          color:#FBFBFB;
+          text-decoration:none;
+          &:hover{
+            text-decoration:underline;
+          }
+        }
+        #logout-button{
+          margin-top:5px;
+          text-align:right;
+          margin-right:14px;
+        }
+      }
       #login-link{
         text-decoration: none;
         font-size:12px;
