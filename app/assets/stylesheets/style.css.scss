@@ -180,7 +180,13 @@ body{
   border:1px solid #CCF9A4;
   background:#FCFCFC;
 }
-
+.alert-error{
+  color:#CC6859;
+  font-size:11px;
+  padding:5px;
+  border:1px solid #F1B297;
+  background:#FCFCFC;
+}
 // errors:
 .errorExplanation{
   border:1px solid #F1B297;
