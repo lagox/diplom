@@ -239,10 +239,16 @@ form{
       display:block;
       margin-bottom:2px;
     }
-    input{
+    input, textarea{
       border:1px solid #ccc;
       padding:3px;
       font-size:12px;
     }
   }
+}
+
+.title-form{
+  margin-top:10px;
+  margin-bottom:10px;
+  font-size:25px;
 }

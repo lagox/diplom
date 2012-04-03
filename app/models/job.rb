@@ -7,6 +7,9 @@ class Job < ActiveRecord::Base
   validates :title, :presence => true
   validates :description, :presence => true
   
+  # associations:
+  belongs_to :user
+  
 end
 # == Schema Information
 #

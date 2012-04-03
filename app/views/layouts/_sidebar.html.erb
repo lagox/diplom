@@ -1,6 +1,9 @@
 <!-- sidebar -->
 <div id="sidebar">
-  <%= link_to "Загрузить работу", new_job_path, :class => "upload-job" %>
+  <% if current_user %>
+    <%= link_to "Загрузить работу", new_job_path, :class => "upload-job" %>
+  <% end %>
+  
   <h1 class="title-category">Категории</h1>
   <ul class="content-sidebar">
     <% @list_categories.each do |c| %>

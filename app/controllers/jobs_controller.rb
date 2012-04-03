@@ -1,6 +1,7 @@
 # -*- encoding : utf-8 -*-
 class JobsController < ApplicationController
   respond_to :html
+  before_filter :authorize, :except => [:index, :show]
   
   def index
     @jobs = Job.all
@@ -12,7 +13,8 @@ class JobsController < ApplicationController
   end
   
   def new
-    
+    @job = Job.new
+    respond_with(@job)
   end
   
   def edit

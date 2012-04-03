@@ -1,0 +1,7 @@
+<div id="all-users">
+  <% @users.each do |user| %>
+    <div class="user-l">
+      <%= link_to user.email, user %>
+    </div>
+  <% end %>
+</div>
