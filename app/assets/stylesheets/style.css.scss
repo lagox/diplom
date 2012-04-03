@@ -125,6 +125,22 @@ body{
       width:19%;
       float:left;
       padding:10px 5px;
+      .upload-job{
+        text-decoration:none;
+        display:block;
+        padding:10px;
+        background:#CDE9C0;
+        width:110px;
+        color:#505050;
+        margin-bottom:20px;
+        -webkit-border-radius:10px;
+        -moz-border-radius:10px;
+        border-radius:10px;
+        -o-border-radius:10px;
+        &:hover{
+          color:#919191;
+        }
+      }
       // border:1px solid #eee;
       .title-category{
         font-size:18px;
@@ -211,5 +227,21 @@ body{
   }
   ul{
     margin-left:10px;
+  }
+}
+
+// forms:
+form{
+  .field{
+    margin:2px 0px 10px 0px;
+    label{
+      display:block;
+      margin-bottom:2px;
+    }
+    input{
+      border:1px solid #ccc;
+      padding:3px;
+      font-size:12px;
+    }
   }
 }

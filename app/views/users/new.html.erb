@@ -1,15 +1,15 @@
 <%= form_for @user do |f| %>
   <%= error_messages_for(@user) %>
   <div class="field">
-    <%= f.label :email %>
+    <%= f.label :email, "Электронная почта" %>
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :password, "Пароль:" %>
     <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation %>
+    <%= f.label :password_confirmation, "Подтверждение пароля:" %>
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
