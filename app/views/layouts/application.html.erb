@@ -15,7 +15,9 @@
         <div id="auth-user">
           <% if current_user %>
             <div id="login-as">
-              Вы вошли как: <%= link_to current_user.email, current_user %>
+              <span>
+                Вы вошли как: <%= link_to current_user.email, current_user %>
+              </span>
               <div id="logout-button">
                 <%= link_to "Выход", logout_path %>
               </div>
