@@ -18,6 +18,11 @@
         text-align:center;
         margin-bottom:5px;
       }
+      .one-job{
+        &:hover{
+          opacity:0.7;
+        }
+      }
     }
   }
 }

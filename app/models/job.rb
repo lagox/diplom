@@ -14,6 +14,8 @@ class Job < ActiveRecord::Base
   # paginate
   paginates_per 6
   
+  default_scope order("created_at DESC")
+  
 end
 # == Schema Information
 #

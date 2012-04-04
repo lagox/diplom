@@ -17,6 +17,9 @@
     <%= f.label :image, "Файл" %>
     <%= f.file_field :image %>
   </div>
+  <div class="field">
+    <%= hidden_field_tag "job[user_id]", current_user.id %>
+  </div>
   <div class="actions">
     <%= f.submit "Отправить" %>
   </div>

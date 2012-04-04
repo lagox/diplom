@@ -9,7 +9,9 @@ class JobsController < ApplicationController
   end
   
   def show
-    
+    @job = Job.find(params[:id])
+    @title = @job.title
+    respond_with(@job)
   end
   
   def new

@@ -1,0 +1,12 @@
+<div id="show-job">
+  <h1 class="show-job-title"><%= @job.title %></h1>
+  <div class="show-job-image">
+    <%= image_tag @job.image_url %>
+  </div>
+  <div class="show-job-desc">
+    <%= @job.description %>
+    <div class="show-job-author">
+      Автор: <%= link_to @job.user.email, @job.user %>
+    </div>
+  </div>
+</div>

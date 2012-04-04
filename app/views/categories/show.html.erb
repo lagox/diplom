@@ -7,7 +7,7 @@
       <li>
         <h1 class="job-title"><%= j.title %></h1>
         <div class="one-job">
-          <%= image_tag j.image_url(:thumb) %>  
+          <%= link_to(image_tag(j.image_url(:thumb)), j) %>  
         </div>
       </li>
     <% end %>
