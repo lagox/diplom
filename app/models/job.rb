@@ -11,6 +11,9 @@ class Job < ActiveRecord::Base
   
   mount_uploader :image, ImageUploader
   
+  # paginate
+  paginates_per 6
+  
 end
 # == Schema Information
 #

@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
   
   def show
     @category = Category.find(params[:id])
-    @jobs = @category.jobs
+    @jobs = @category.jobs.page params[:page]
     @title = @category.title
     respond_with(@jobs)
   end

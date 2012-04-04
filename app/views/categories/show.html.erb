@@ -2,5 +2,17 @@
   <%= @category.description %>
 </div>
 <div id="category-jobs">
-  работы
+  <ul>
+    <% @jobs.each do |j| %>
+      <li>
+        <h1 class="job-title"><%= j.title %></h1>
+        <div class="one-job">
+          <%= image_tag j.image_url(:thumb) %>  
+        </div>
+      </li>
+    <% end %>
+      <div class="clear"></div>
+  </ul>
 </div>
+<%= paginate @jobs %>
+
