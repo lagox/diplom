@@ -244,6 +244,12 @@ form{
       padding:3px;
       font-size:12px;
     }
+    input[type=file]{
+      border:none;
+    }
+  }
+  .actions{
+    margin:10px 0px;
   }
 }
 

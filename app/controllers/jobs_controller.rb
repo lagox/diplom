@@ -22,7 +22,13 @@ class JobsController < ApplicationController
   end
   
   def create
-    
+    @job = Job.new(params[:job])
+    if @job.save
+      flash[:notice] = "Работа успешно создана"
+      respond_with(@job, location: jobs_path)
+    else
+      render 'new'
+    end
   end
   
   def update

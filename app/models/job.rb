@@ -1,14 +1,15 @@
 # -*- encoding : utf-8 -*-
 class Job < ActiveRecord::Base
-  # associations
-  belongs_to :category
-  
+
   # validates
   validates :title, :presence => true
   validates :description, :presence => true
   
   # associations:
   belongs_to :user
+  belongs_to :category
+  
+  mount_uploader :image, ImageUploader
   
 end
 # == Schema Information
