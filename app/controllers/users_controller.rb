@@ -2,6 +2,7 @@
 class UsersController < ApplicationController
   
   respond_to :html
+  before_filter :authorize, :only => [:settings]
   
   def index
     @users = User.all
@@ -22,9 +23,28 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       session[:user_id] = @user.id
-      redirect_to root_url, notice: "Спасибо, за регистрацию на нашем ресурсе"
+      redirect_to root_url, notice: 'Спасибо, за регистрацию на нашем ресурсе'
     else
       render 'new'
     end
   end
+  
+  def settings
+    if current_user
+      @user = User.find(current_user.id)  
+    end
+    redirect_to(root_url, notice: 'Такого пользователя нет') if @user.nil?
+    @title = 'Настройки профиля'
+  end
+  
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(params[:user])
+      flash[:notice] = "Пользователь успешно обновлен"
+      respond_with(@user, location: @user)
+    else
+      render 'settings'
+    end
+  end
+  
 end

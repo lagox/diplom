@@ -19,6 +19,7 @@
                 Вы вошли как: <%= link_to current_user.email, current_user %>
               </span>
               <div id="logout-button">
+                <%= link_to "Настройки", settings_path %> | 
                 <%= link_to "Выход", logout_path %>
               </div>
             </div>

@@ -1,0 +1,22 @@
+<h1 class="page-title">Настройки профиля</h1>
+<%= form_for(@user, :html => {:multipart => true}) do |f| %>
+  <%= error_messages_for(@user) %>
+  <div class="field">
+    <%= f.label :name, "Имя:" %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :avatar, "Аватар:" %>
+    <%= f.file_field :avatar %>
+  </div>
+  <div class="field">
+    <%= f.label :description, "Описание:" %>
+    <%= f.text_area :description, :rows => 8 %>
+  </div>
+  <div class="field">
+    <%= hidden_field_tag "user[id]", current_user.id %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Отправить" %>
+  </div>
+<% end %>
