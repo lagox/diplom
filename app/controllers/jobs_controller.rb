@@ -20,7 +20,8 @@ class JobsController < ApplicationController
   end
   
   def edit
-    
+    @job = Job.find(params[:id])
+    respond_with(@job)
   end
   
   def create
@@ -34,11 +35,19 @@ class JobsController < ApplicationController
   end
   
   def update
-    
+    @job = Job.find(params[:id])
+    if @job.update_attributes(params[:job])
+      flash[:notice] = "Работа успешно обновлена"
+      respond_with(@job, location: jobs_path)
+    else
+      render 'edit'
+    end
   end
   
   def destroy
-    
+    @job = Job.find(params[:id])
+    @job.destroy
+    redirect_to(jobs_path, notice: "Работа успешно удалена")
   end
   
 end
