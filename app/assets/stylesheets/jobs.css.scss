@@ -9,18 +9,23 @@
   }
   .show-job-image{
     margin-left:80px;
-    width:700px;
     img{
       border:1px solid #6A6A6A;
-      width:700px;
-      height:500px;
+      width:600px;
+      height:400px;
     }
   }
   .show-job-desc{
     font-size:11px;
-    margin-top:20px;
-    width:690px;
-    margin:0 auto;
+    padding:5px;
+    width:670px;
+    margin:20px auto;
+    color:#474747;
+    background:#F6F6F6;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    -o-border-radius:10px;
     .show-job-author{
       margin-top:10px;
     }

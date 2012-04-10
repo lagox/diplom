@@ -7,7 +7,7 @@ body{
     background-image:url('/assets/bglines.png');
 }
 #wrapper{
-  width:90%;
+  width:1000px;
   border:1px solid #ccc;
   background:#fff;
   margin:0 auto;
@@ -120,9 +120,9 @@ body{
     margin-top:5px;
     margin-bottom:10px;
     padding:5px;
-    width:100%;
     #sidebar{
-      width:19%;
+      width:200px;
+      // border:1px solid #ccc;
       float:left;
       padding:10px 5px;
       .upload-job{
@@ -174,7 +174,7 @@ body{
     }
     #content{
       float:left;
-      width:75%;
+      width:750px;
       margin-left:15px;
       // border:1px solid #ccc;
       min-height:450px;

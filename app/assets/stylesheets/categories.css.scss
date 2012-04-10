@@ -4,28 +4,6 @@
   // text-shadow: 0px 1px 0px #e5e5ee; 
   font:14px/1.4 "myriad-pro-1","myriad-pro-2","Lucida Grande",Sans-Serif;
 }
-#category-jobs{
-  margin:20px 0px;
-  // border:1px solid #ccc;
-  ul{
-    list-style-type:none;
-    li{
-      float:left;
-      margin-right:20px;
-      margin-bottom:25px;
-      img{
-        width:230px;
-      }
-      .job-title{
-        font-size:11px;
-        text-align:center;
-        margin-bottom:5px;
-      }
-      .one-job{
-        &:hover{
-          opacity:0.7;
-        }
-      }
-    }
-  }
+.jobs-in-category{
+  border:1px solid #ccc;
 }
