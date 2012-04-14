@@ -5,5 +5,33 @@
   font:14px/1.4 "myriad-pro-1","myriad-pro-2","Lucida Grande",Sans-Serif;
 }
 .jobs-in-category{
-  border:1px solid #ccc;
+  // border:1px solid #ccc;
+  .one-job-category{
+    width:230px;
+    float:left;
+    position:relative;
+    margin-right:10px;
+    margin-top:10px;
+    a{
+      img{
+        width:230px;
+        height:170px;
+      }
+    }  
+    .over-description{
+      position:absolute;
+      top:135px;
+      width:220px;
+      min-height:20px;
+      left:0;
+      font-size:11px;
+      background: rgb(0, 0, 0); /* fallback color */
+      background: rgba(0, 0, 0, 0.7);
+      padding:10px 5px 5px 5px;
+      color:#fff;
+      &:hover{
+        background: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
 }
