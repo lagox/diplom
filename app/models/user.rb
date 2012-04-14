@@ -9,4 +9,5 @@ class User < ActiveRecord::Base
   
   # associations
   has_many :jobs, :dependent => :destroy
+  mount_uploader :avatar, ImageUploader
 end
