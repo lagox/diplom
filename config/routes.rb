@@ -1,6 +1,8 @@
 # -*- encoding : utf-8 -*-
 Diplom::Application.routes.draw do
   
+  resources :comments
+
   get 'signup', to: 'users#new', as: 'signup'
   get 'logout', to: 'sessions#destroy', as: 'logout'
   get 'settings', to: 'users#settings', as: 'settings'

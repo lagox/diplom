@@ -1,6 +1,6 @@
 <div id="show-job">
   <div class="show-job-image">
-    <%= image_tag @job.image_url %>
+    <%= link_to(image_tag(@job.image_url), @job.image_url) %>
     <div class="show-over-description"><%= @job.title %></div>
   </div>
   <div class="show-job-desc">

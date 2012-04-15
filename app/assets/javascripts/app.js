@@ -25,3 +25,8 @@ $(document).ready(function() {
   });
   
 });
+
+// job -> fancybox
+$(document).ready(function() {
+  $(".show-job-image a").fancybox();
+});

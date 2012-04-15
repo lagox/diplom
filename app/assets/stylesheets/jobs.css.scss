@@ -28,8 +28,11 @@
       font-size:22px;
       background: rgb(0, 0, 0); /* fallback color */
       background: rgba(0, 0, 0, 0.8);
-      padding:15px 5px 5px 5px;
+      padding:15px 5px 5px 15px;
       color:#fff;
+      &:hover{
+        background: rgba(0, 0, 0, 0.6);
+      }
     }
   }
   .show-job-desc{
