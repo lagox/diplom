@@ -1,0 +1,23 @@
+<% if @job.comments.size > 0 %>
+  Комментарии:
+  <div class="job-comments">
+    <% @job.comments.each do |c| %>
+      <div class="one-job-comment">
+        <div class="name-user-comment">
+          <%= name_in_header(c.user) %> 
+          <span class="comment-date">
+            (<%= c.created_at.to_date %>)  
+          </span>
+        </div>
+        <div class="avatar-comment">
+          <%= link_to(isset_avatar(c.user.avatar_url(:thumb)), c.user) %>
+        </div>
+        <div class="text-comment">
+          <%= c.text %>  
+        </div>
+        <div class="clear"></div>
+      </div>
+      
+    <% end %>  
+  </div>  
+<% end %>

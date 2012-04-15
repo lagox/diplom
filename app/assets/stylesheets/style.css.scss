@@ -356,12 +356,13 @@ form{
   margin-bottom:15px;
 }
 #add-comment-no-user{
-  font-size:14px;
+  font-size:11px;
+  margin-top:30px;
+  color:#5C5C5C;
   text-align:center;
 }
 #form-comment{
-  width:620px;
-  margin:0 auto;
+  margin:0px 0px 0px 10px;
   margin-top:10px;
   .field{
     label{
@@ -370,6 +371,8 @@ form{
       color:#5D5D5D;
     }
     textarea{
+      width:400px;
+      height:100px;
       border:2px solid #ccc;
       &:focus{
         border:2px solid #eee;

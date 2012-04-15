@@ -49,3 +49,52 @@
   text-align:right;
   font-size:11px;
 }
+.job-comments{
+  margin:10px 0px 20px 10px;
+  .one-job-comment{
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    -o-border-radius:5px;
+    border-bottom:1px solid #eee;
+    margin-bottom:7px;
+    padding:5px;
+    &:hover{
+      background:#F2F2F2;
+    }
+    .text-comment{
+      font-size:12px;
+      margin:5px 2px 3px 5px;
+      float:left;
+    }
+    .name-user-comment{
+      a{
+        text-decoration:none;
+        &:hover{
+          text-decoration:underline;
+        }
+      }
+      font-size:10px;
+      margin-bottom:3px;
+      .comment-date{
+        font-size:8px;
+      }
+    }
+    .avatar-comment{
+      float:left;
+      a{
+        &:hover{
+          opacity:0.7;
+        }
+      }
+      img{
+        -webkit-border-radius:5px;
+        -moz-border-radius:5px;
+        border-radius:5px;
+        -o-border-radius:5px;       
+        width:32px;
+        height:32px;
+      }
+    }
+  }
+}
