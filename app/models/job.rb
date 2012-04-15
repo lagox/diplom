@@ -12,7 +12,7 @@ class Job < ActiveRecord::Base
   mount_uploader :image, ImageUploader
   
   # paginate
-  paginates_per 6
+  paginates_per 9
   
   default_scope order("created_at DESC")
   
