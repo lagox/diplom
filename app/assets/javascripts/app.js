@@ -15,3 +15,13 @@ $(document).ready(function() {
       .removeClass('active-login-link');
   });  
 });
+
+// description in category
+$(document).ready(function() {
+  $('#category-description h1').toggle(function() {
+    $('.hide-description').slideDown('fast');
+  }, function() {
+    $('.hide-description').slideUp('fast');
+  });
+  
+});

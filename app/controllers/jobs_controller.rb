@@ -2,6 +2,7 @@
 class JobsController < ApplicationController
   respond_to :html
   before_filter :authorize, :except => [:index, :show]
+  before_filter :access_job, :only => [:edit, :update, :destroy]
   
   def index
     @jobs = Job.all
@@ -28,7 +29,7 @@ class JobsController < ApplicationController
     @job = Job.new(params[:job])
     if @job.save
       flash[:notice] = "Работа успешно создана"
-      respond_with(@job, location: jobs_path)
+      respond_with(@job, location: root_path)
     else
       render 'new'
     end
@@ -38,7 +39,7 @@ class JobsController < ApplicationController
     @job = Job.find(params[:id])
     if @job.update_attributes(params[:job])
       flash[:notice] = "Работа успешно обновлена"
-      respond_with(@job, location: jobs_path)
+      respond_with(@job, location: @job)
     else
       render 'edit'
     end

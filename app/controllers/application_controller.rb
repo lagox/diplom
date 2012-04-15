@@ -20,4 +20,10 @@ class ApplicationController < ActionController::Base
     def authorize
       redirect_to root_url, alert: "Войдите в систему" if current_user.nil?
     end
+    
+    def access_job
+      job = Job.find(params[:id])
+      redirect_to root_url, 
+        alert: "Вы не владелец данной работы" if job.user_id != current_user.id
+    end
 end

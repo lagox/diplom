@@ -1,6 +1,8 @@
 <div id="category-description">
   <h1><%= @category.title %></h1>
-  <%= @category.description %>
+  <div class="hide-description">
+    <%= @category.description %>  
+  </div>
 </div>
 <div class="jobs-in-category">
   <% @jobs.each do |j| %>

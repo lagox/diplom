@@ -8,6 +8,7 @@
     margin-bottom:10px;
   }
   .show-job-image{
+    position:relative;
     margin-left:80px;
     img{
       -webkit-border-radius:5px;
@@ -17,6 +18,18 @@
       border:1px solid #6A6A6A;
       width:600px;
       height:400px;
+    }
+    .show-over-description{
+      position:absolute;
+      bottom:35px;
+      width:420px;
+      min-height:40px;
+      left:0;
+      font-size:22px;
+      background: rgb(0, 0, 0); /* fallback color */
+      background: rgba(0, 0, 0, 0.8);
+      padding:15px 5px 5px 5px;
+      color:#fff;
     }
   }
   .show-job-desc{
