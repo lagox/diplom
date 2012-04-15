@@ -21,4 +21,10 @@ module ApplicationHelper
       image_tag(object)
     end
   end
+  
+  def description_user(object)
+    desc = object.description
+    empty_desc = "Увы, пользователь не оставил информации о себе"
+    desc.nil? ? empty_desc : desc
+  end
 end
