@@ -1,7 +1,5 @@
 # -*- encoding : utf-8 -*-
 Diplom::Application.routes.draw do
-  
-  resources :comments
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'logout', to: 'sessions#destroy', as: 'logout'
@@ -13,7 +11,9 @@ Diplom::Application.routes.draw do
 
   resources :categories, :except => [:index]
 
-  resources :jobs
+  resources :jobs do
+    resources :comments  
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

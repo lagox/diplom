@@ -8,7 +8,9 @@ class Job < ActiveRecord::Base
   # associations:
   belongs_to :user
   belongs_to :category
+  has_many :comments, :dependent => :destroy
   
+  # uploader
   mount_uploader :image, ImageUploader
   
   # paginate

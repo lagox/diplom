@@ -9,6 +9,9 @@ class User < ActiveRecord::Base
   
   # associations
   has_many :jobs, :dependent => :destroy
+  has_many :comments, :dependent => :destroy
+
+  # uploader
   mount_uploader :avatar, AvatarUploader
   
   scope :photo, where(:typeuser => "photo")
