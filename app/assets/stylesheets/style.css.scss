@@ -4,11 +4,15 @@ body{
   a{
     color:#5E5E5E;
   }
-    background-image:url('/assets/bglines.png');
+  background-image:url('/assets/bglines.png');  
+}
+#main-wrapper{
+  background-color: rgba(0, 0, 0, 0.3);
+  min-height:690px;
 }
 #wrapper{
   width:1000px;
-  border:1px solid #ccc;
+  // border:1px solid #ccc;
   background:#fff;
   margin:0 auto;
   // header
@@ -17,8 +21,7 @@ body{
   }
   #header{
     height:80px;
-    background-color: rgba(0, 0, 0, 0.10);
-    
+    background-color: rgba(0, 0, 0, 0.6);
     a{
       color:#fff;
     }
@@ -182,17 +185,21 @@ body{
   }
   
   // footer
-  #footer{
+  footer{
+    background-image:url('/assets/bglines.png');
     clear:both;
     height:50px;
-    background:#F6F6F6;
-    #copyright{
-      font-size:11px;
-      padding-top:20px;
-      margin-left:30px;
+    #footer{  
+      height:50px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color:#fff;
+      #copyright{
+        font-size:11px;
+        padding-top:20px;
+        margin-left:30px;
+      }
     }
   }
-  
 }
 
 .clear{

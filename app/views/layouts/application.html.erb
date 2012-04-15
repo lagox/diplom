@@ -7,48 +7,53 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="wrapper">
-    <!-- header -->
-    <header>
-      <div id="header">
-        <h1 id="site-title"><a href="/">Des-Engine</a></h1>
-        <div id="auth-user">
-          <% if current_user %>
-            <div id="login-as">
-              <span>
-                Вы вошли как: <%= link_to current_user.email, current_user %>
-              </span>
-              <div id="logout-button">
-                <%= link_to "Настройки", settings_path %> | 
-                <%= link_to "Выход", logout_path %>
+  <div id="main-wrapper">
+    <div id="wrapper">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1 id="site-title"><a href="/">Designers</a></h1>
+          <div id="auth-user">
+            <% if current_user %>
+              <div id="login-as">
+                <span>
+                  Вы вошли как: <%= link_to current_user.email, current_user %>
+                </span>
+                <div id="logout-button">
+                  <%= link_to "Настройки", settings_path %> | 
+                  <%= link_to "Выход", logout_path %>
+                </div>
               </div>
-            </div>
-          <% else %>
-            <%= link_to "Регистрация", new_user_path, :id => 'signup-link' %>
-            <a href="#" id="login-link">Войти</a>
-            <%= form_tag sessions_path do %>
-              <%= text_field_tag :email, nil, :class => 'a-username',
-                  :placeholder => 'логин' %>
-              <%= password_field_tag :password, nil, :class => 'a-password', :placeholder => 'пароль' %>
-              <%= submit_tag "Войти", :class => 'a-subit' %>
+            <% else %>
+              <%= link_to "Регистрация", new_user_path, :id => 'signup-link' %>
+              <a href="#" id="login-link">Войти</a>
+              <%= form_tag sessions_path do %>
+                <%= text_field_tag :email, nil, :class => 'a-username',
+                    :placeholder => 'логин' %>
+                <%= password_field_tag :password, nil, :class => 'a-password', :placeholder => 'пароль' %>
+                <%= submit_tag "Войти", :class => 'a-subit' %>
+              <% end %>
             <% end %>
-          <% end %>
+          </div>
+        </div>
+      </header>
+      <!-- main content -->
+      <div id="main-content">
+        <%= render 'layouts/sidebar' %>
+        <!-- content -->
+        <div id="content">
+          <%= flash_msg(flash[:notice]) %>
+          <%= yield %>
         </div>
       </div>
-    </header>
-    <!-- main content -->
-    <div id="main-content">
-      <%= render 'layouts/sidebar' %>
-      <!-- content -->
-      <div id="content">
-        <%= flash_msg(flash[:notice]) %>
-        <%= yield %>
-      </div>
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <div id="copyright">&copy 2012. Кусаинов Ерлан</div>
+        </div>  
+      </footer>
     </div>
-    <!-- footer -->
-    <div id="footer">
-      <div id="copyright">&copy 2012. Кусаинов Ерлан</div>
-    </div>
+    
   </div>
-</body>
+  </body>
 </html>
