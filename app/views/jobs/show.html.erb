@@ -9,10 +9,14 @@
       <b>Автор: <%= name_in_header(@job.user) %></b>
     </div>
   </div>
-  <% if owner_job?(current_user, @job) %>
-    <div class="actions-with-job">
-      <%= link_to "Редактировать", edit_job_path(@job) %>
-      <%= link_to "Удалить", @job, :method => :delete, :confirm => "Вы уверены?" %>
-    </div>
+  <% if current_user %>
+    <% if owner_job?(current_user, @job) %>
+      <div class="actions-with-job">
+        <%= link_to "Редактировать", edit_job_path(@job) %>
+        <%= link_to "Удалить", @job, :method => :delete, :confirm => "Вы уверены?" %>
+      </div>
+    <% end %>
   <% end %>
+  <%= render :partial => "shared/comments" %>
+  <%= render :partial => "shared/comment_form" %>
 </div>

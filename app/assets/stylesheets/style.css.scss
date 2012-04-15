@@ -355,3 +355,25 @@ form{
   margin-top:5px;
   margin-bottom:15px;
 }
+#add-comment-no-user{
+  font-size:14px;
+  text-align:center;
+}
+#form-comment{
+  width:620px;
+  margin:0 auto;
+  margin-top:10px;
+  .field{
+    label{
+      font-size:12px;
+      margin-bottom:-13px;
+      color:#5D5D5D;
+    }
+    textarea{
+      border:2px solid #ccc;
+      &:focus{
+        border:2px solid #eee;
+      }
+    }
+  }
+}

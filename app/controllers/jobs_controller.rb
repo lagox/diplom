@@ -11,6 +11,7 @@ class JobsController < ApplicationController
   
   def show
     @job = Job.find(params[:id])
+    @comment = Comment.new
     @title = @job.title
     respond_with(@job)
   end
