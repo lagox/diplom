@@ -6,7 +6,7 @@
   <div class="show-job-desc">
     <%= @job.description %>
     <div class="show-job-author">
-      <b>Автор: <%= link_to @job.user.email, @job.user %></b>
+      <b>Автор: <%= name_in_header(@job.user) %></b>
     </div>
   </div>
 </div>
