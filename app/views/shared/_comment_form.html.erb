@@ -1,8 +1,10 @@
+<div id="add-comment-link">
+  Добавить комментарий
+</div>
 <div id="form-comment">
   <% if current_user %>
 	  <%= form_for [@job, @comment] do |f| %>
 			<div class="field">
-				<%= f.label :text, "Текст комментария:" %><br />
 	  		<%= f.text_area :text, :rows => 5 %><br />
 			</div>
 	  	<%= f.hidden_field :job_id, :value => @job.id %>

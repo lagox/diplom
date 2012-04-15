@@ -30,3 +30,13 @@ $(document).ready(function() {
 $(document).ready(function() {
   $(".show-job-image a").fancybox();
 });
+
+// form comment show
+$(document).ready(function() {
+  $('#add-comment-link').toggle(function() {
+    $('#form-comment').slideDown();
+  }, function() {
+    $('#form-comment').slideUp();
+  });
+  
+});
