@@ -17,7 +17,7 @@
             <% if current_user %>
               <div id="login-as">
                 <span>
-                  Вы вошли как: <%= link_to current_user.email, current_user %>
+                  Вы вошли как: <%= name_in_header(current_user) %>
                 </span>
                 <div id="logout-button">
                   <%= link_to "Настройки", settings_path %> | 

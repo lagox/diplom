@@ -38,4 +38,14 @@ module ApplicationHelper
       "Неизвестно"
     end
   end
+  
+  def name_in_header(object)
+    name = object.name
+    if name.nil?
+      link_to(object.email, object)
+    else
+      link_to(name, object)
+    end
+  end
+  
 end

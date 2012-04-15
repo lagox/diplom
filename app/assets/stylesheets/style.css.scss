@@ -84,13 +84,15 @@ body{
         }
       }
       .active-login-link{
-        background:#DCE2CC;
+        background:#878787;
+        opacity:0.8;
       }
       form{
         position:absolute;
         z-index:2;
         display:none;
-        background:#DCE2CC;
+        background:#878787;
+        opacity:0.8;
         padding:10px;
         -webkit-border-radius:0px 0px 5px 5px;
         -moz-border-radius:0px 0px 5px 5px;

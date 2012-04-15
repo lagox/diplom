@@ -1,6 +1,6 @@
 <div id="show-user">
   <div class="profile-avatar">
-    <%= isset_avatar(@user.avatar_url(:thumb)) %>
+    <%= isset_avatar(@user.avatar_url) %>
   </div>
   <% unless @user.name.nil? %>
     <div class="name-user">
