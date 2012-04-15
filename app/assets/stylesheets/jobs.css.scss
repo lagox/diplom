@@ -10,6 +10,10 @@
   .show-job-image{
     margin-left:80px;
     img{
+      -webkit-border-radius:5px;
+      -moz-border-radius:5px;
+      border-radius:5px;
+      -o-border-radius:5px;
       border:1px solid #6A6A6A;
       width:600px;
       height:400px;
