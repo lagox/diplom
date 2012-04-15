@@ -13,4 +13,12 @@ module ApplicationHelper
   def flash_msg(object)
     render(:partial => 'shared/flashmsg', :locals => {:object => object})
   end
+  
+  def isset_avatar(object)
+    if object.nil?
+      image_tag('default-avatar.png')
+    else
+      image_tag(object)
+    end
+  end
 end

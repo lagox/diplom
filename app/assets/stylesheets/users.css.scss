@@ -1,7 +1,21 @@
 #show-user{
-  border:1px solid #eee;
+  margin-top:10px;
+  // border:1px solid #eee;
   padding:10px;
   font-size:12px;
+  .profile-avatar{
+    float:left;
+    // border:1px solid #ccc;
+    margin-right:20px;
+    img{
+      border:1px solid #ccc;
+      width:100px;
+      height:100px;
+      &:hover{
+        opacity:0.8;
+      }
+    }
+  }
   .email-user{
     margin-bottom:10px;
   }
