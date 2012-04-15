@@ -133,23 +133,26 @@ body{
       .upload-job{
         text-decoration:none;
         display:block;
-        padding:8px;
-        background:#CDE9C0;
+        padding:5px;
+        font-size:11px;
+        background:#A5CB8C;
         width:110px;
-        color:#505050;
-        margin-bottom:20px;
+        color:#fff;
+        margin:0px 5px 20px 0px;
+        // margin-bottom:20px;
         -webkit-border-radius:5px;
         -moz-border-radius:5px;
         border-radius:5px;
         -o-border-radius:5px;
+        text-align:center;
         &:hover{
-          color:#fff;
-          background:#A5CB8C;
+          color:#696969;
+          background:#CDE9C0;
         }
       }
       // border:1px solid #eee;
       .title-category{
-        font-size:18px;
+        font-size:16px;
         margin-bottom:5px;
         color:#646464;
       }
@@ -157,6 +160,7 @@ body{
         margin:1px 2px 20px 4px;
       }
       a{
+        text-decoration:none;
         color:#898989;
         font-size:12px;
         &:hover{
@@ -166,12 +170,13 @@ body{
       }
       ul{
         li{
+          margin-bottom:-2px;
           a{
             color:#898989;
             font-size:12px;
             &:hover{
               color:#5C5C5C;
-              text-decoration:none;
+              text-decoration:underline;
             }
           }
         }
