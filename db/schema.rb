@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120405161824) do
+ActiveRecord::Schema.define(:version => 20120415092117) do
 
   create_table "categories", :force => true do |t|
     t.string "title"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20120405161824) do
     t.string   "avatar"
     t.text     "description"
     t.integer  "rating"
+    t.string   "typeuser"
   end
 
 end

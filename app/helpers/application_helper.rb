@@ -27,4 +27,15 @@ module ApplicationHelper
     empty_desc = "Увы, пользователь не оставил информации о себе"
     desc.nil? ? empty_desc : desc
   end
+  
+  def type_user(object)
+    case object.typeuser
+    when "photo"
+      "Фотограф"
+    when "design"
+      "Дизайнер"
+    else
+      "Неизвестно"
+    end
+  end
 end

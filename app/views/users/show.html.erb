@@ -2,8 +2,13 @@
   <div class="profile-avatar">
     <%= isset_avatar(@user.avatar_url(:thumb)) %>
   </div>
-  <div class="name-user">
-    <%= @user.name %>
+  <% unless @user.name.nil? %>
+    <div class="name-user">
+      <%= @user.name %>
+    </div>  
+  <% end %>
+  <div class="typeuser-user">
+    <%= type_user(@user) %>
   </div>
   <div class="email-user">
     e-mail: <%= @user.email %>
