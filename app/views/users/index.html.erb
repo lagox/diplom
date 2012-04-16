@@ -1,7 +1,4 @@
 <div id="all-users">
-  <% @users.each do |user| %>
-    <div class="user-l">
-      <%= link_to user.email, user %>
-    </div>
-  <% end %>
+  <h1 class="title-user-t">Все пользователи</h1>
+  <%= render(@users) %>
 </div>

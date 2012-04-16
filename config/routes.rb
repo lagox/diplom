@@ -5,7 +5,12 @@ Diplom::Application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
   get 'settings', to: 'users#settings', as: 'settings'
   
-  resources :users
+  resources :users do
+    collection do
+      get 'photographers', as: 'photographers'
+      get 'designers', as: 'designers'
+    end
+  end
   
   resources :sessions
 

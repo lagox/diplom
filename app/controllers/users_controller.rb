@@ -47,4 +47,14 @@ class UsersController < ApplicationController
     end
   end
   
+  # other methods
+  
+  def photographers
+    @users = User.photo
+  end
+  
+  def designers
+    @users = User.design
+  end
+  
 end
