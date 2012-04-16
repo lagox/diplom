@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   before_filter :authorize, :only => [:settings]
   
   def index
-    @users = User.all
+    @users = User.page params[:page]
     @title = "Все дизайнеры"
     respond_with(@users)
   end
@@ -50,11 +50,11 @@ class UsersController < ApplicationController
   # other methods
   
   def photographers
-    @users = User.photo
+    @users = User.photo.page params[:page]
   end
   
   def designers
-    @users = User.design
+    @users = User.design.page params[:page]
   end
   
 end

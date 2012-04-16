@@ -45,10 +45,36 @@
   padding:5px;
   font-size:12px;
   .user-l{
-    margin-bottom:7px;
+    .user-name-over-avatar{
+      text-align:center;
+      margin-bottom:5px;
+      a{
+        text-decoration:none; 
+        color:#3D3D3D;
+        letter-spacing:-1px;
+        margin-bottom:10px;
+      }
+    }
+    a{
+      img{
+        display: block;
+        margin:0 auto;
+        -webkit-border-radius:10px;
+        -moz-border-radius:10px;
+        border-radius:10px;
+        -o-border-radius:10px;
+        &:hover{
+          opacity:0.8;
+        }
+      }
+    }
+    min-width:230px;
+    float:left;
+    margin-right:10px;
+    margin-bottom:30px;
   }
 }
 .title-user-t{
   font-size:20px;
-  margin-bottom:10px;
+  margin-bottom:20px;
 }

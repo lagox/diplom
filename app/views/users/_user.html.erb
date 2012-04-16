@@ -1,3 +1,6 @@
 <%= div_for(user, :class => 'user-l') do %>
-  <%= link_to user.email, user %>
+  <div class="user-name-over-avatar">
+    <%= link_to name_in_header(user), user %>  
+  </div>
+  <%= link_to(isset_avatar(user.avatar_url(:thumb)), user) %>
 <% end %>

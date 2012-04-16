@@ -23,4 +23,6 @@ class User < ActiveRecord::Base
       "Фотограф" => "photo"
     }
   end
+  
+  paginates_per 6
 end
