@@ -17,11 +17,9 @@
       </div>
     <% end %>
   <% end %>
-  <% if @job.comments.size > 0 %>
-    Комментарии:
-    <div class="job-comments">
-      <%= render(@job.comments) %>
-    </div>  
-  <% end %>
+  Комментарии:
+  <div class="job-comments">
+    <%= render(@job.comments) %>
+  </div>  
   <%= render :partial => "shared/comment_form" %>
 </div>
