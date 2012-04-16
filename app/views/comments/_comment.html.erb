@@ -1,0 +1,15 @@
+<%= div_for(comment, :class => "one-job-comment") do %>
+  <div class="name-user-comment">
+    <%= name_in_header(comment.user) %> 
+    <span class="comment-date">
+      (<%= comment.created_at.to_date %>)  
+    </span>
+  </div>
+  <div class="avatar-comment">
+    <%= link_to(isset_avatar(comment.user.avatar_url(:thumb)), comment.user) %>
+  </div>
+  <div class="text-comment">
+    <%= comment.text %>  
+  </div>
+  <div class="clear"></div>
+<% end %>

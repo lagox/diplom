@@ -7,9 +7,15 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(params[:comment])
     if @comment.save
-      redirect_to :back, :notice =>"Комментарий добавлен"
+      respond_to do |format|
+        format.html { redirect_to :back, :notice =>"Комментарий добавлен" }
+        format.js
+      end
     else
-      redirect_to :back, :alert =>"Ошибка: текст комментария пуст" 
+      respond_to do |format|
+        format.html {redirect_to :back, :alert =>"Ошибка: текст комментария пуст" }
+        format.js
+      end
     end
   end
   

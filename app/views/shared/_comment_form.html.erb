@@ -3,7 +3,7 @@
 </div>
 <div id="form-comment">
   <% if current_user %>
-	  <%= form_for [@job, @comment] do |f| %>
+	  <%= form_for([@job, @comment], :remote => true) do |f| %>
 			<div class="field">
 	  		<%= f.text_area :text, :rows => 5 %><br />
 			</div>
