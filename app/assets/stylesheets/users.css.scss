@@ -7,7 +7,7 @@
   .profile-avatar{
     float:left;
     // border:1px solid #ccc;
-    height:400px;
+    // height:400px;
     margin-right:20px;
     img{
       border:1px solid #ccc;
@@ -27,6 +27,7 @@
   }
   .description-user{
     font-size:15px;
+    text-align:justify;
     margin-top:10px;
     .description-user-title{
       font-size:12px;
