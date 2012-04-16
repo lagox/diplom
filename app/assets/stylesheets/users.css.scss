@@ -26,10 +26,15 @@
     margin-bottom:10px;
   }
   .description-user{
-    font-size:15px;
+    font-size:12px;
+    font-style:italic;
     text-align:justify;
-    margin-top:10px;
+    line-height:17px;
+    margin-top:15px;
+    color:#838383;
     .description-user-title{
+      color:#565656;
+      font-style:normal;
       font-size:12px;
       margin-bottom:5px;
     }
@@ -78,4 +83,26 @@
 .title-user-t{
   font-size:20px;
   margin-bottom:20px;
+}
+.gallery-user-title{
+  color:#7E7E7E;
+  font-size:18px;
+  letter-spacing:-1px;
+  margin-top:15px;
+}
+#arrow-left-g{
+  float:left;
+}
+#arrow-right-g{
+  float:left;
+}
+#gallery-user{
+  float:left;
+  width:650px;
+  // border:1px solid #ccc;
+  margin-top:10px;
+  img{
+    width:200px;
+    height:150px;
+  }
 }

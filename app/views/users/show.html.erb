@@ -21,4 +21,19 @@
     <%= description_user(@user)%>
   </div>
   <div class="clear"></div>
+  <h1 class="gallery-user-title">Работы пользователя</h1>
+  <div id="arrow-left-g">
+    <img src="/assets/arrow-left.png" alt="">
+  </div>
+  <div id="gallery-user">
+    <ul>
+      <% @user.jobs.each do |j| %>
+        <%= image_tag(j.image_url(:thumb)) %>
+      <% end %>
+    </ul>
+  </div>
+  <div id="arrow-right-g">
+    <img src="/assets/arrow-right.png" alt="">
+  </div>
+  <div class="clear"></div>
 </div>
