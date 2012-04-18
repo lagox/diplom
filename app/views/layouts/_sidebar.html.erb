@@ -18,7 +18,7 @@
         <li>
           <span class="live-c-user"><%= isset_avatar(c.user.avatar_url) %><%= name_in_header(c.user) %> </span>
           <span class="say-user-text">→</span>
-          <span class="live-job-title"><%= link_to c.job.title, c.job %></span>
+          <span class="live-job-title"><%= link_to c.job.title, job_path(c.job, :anchor => "comment_#{c.id.to_s}")%></span>
         </li>
       <% end %>
     </ul>
