@@ -4,10 +4,10 @@ body{
   a{
     color:#5E5E5E;
   }
-  background-image:url('/assets/bglines.png');  
+  background-image:url('/assets/background.png');  
 }
 #main-wrapper{
-  background-color: rgba(0, 0, 0, 0.3);
+  // background-color: rgba(0, 0, 0, 0.3);
   min-height:690px;
 }
 #wrapper{
@@ -19,7 +19,8 @@ body{
   header{
     background-image:url('/assets/bglines.png');
   }
-  #header{
+  #header{  
+    color:#666666;
     #logo{
       // border:1px solid #ccc;
       // display: inline-block;
@@ -33,10 +34,10 @@ body{
       }
     }
     height:110px;
-    border-bottom:3px solid #468FB0;
-    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom:5px solid #CCC6BD;
+    // background-color: rgba(0, 0, 0, 0.1);
     a{
-      color:#fff;
+      color:#666666 !important;
     }
 
     #auth-user{
@@ -48,7 +49,7 @@ body{
       #login-as{
         font-size:11px;
         margin-top:-10px;
-        color:#FBFBFB;
+        color:#666666;
         text-align:right;
         // border:1px solid #ccc;
         margin-left:-30px;
@@ -86,15 +87,13 @@ body{
         }
       }
       .active-login-link{
-        background:#878787;
-        opacity:0.8;
+        background:url('/assets/background.png');
       }
       form{
         position:absolute;
         z-index:2;
         display:none;
-        background:#878787;
-        opacity:0.8;
+        background:url('/assets/background.png');
         padding:10px;
         -webkit-border-radius:0px 0px 5px 5px;
         -moz-border-radius:0px 0px 5px 5px;
@@ -122,8 +121,7 @@ body{
   
   // main content
   #main-content{
-    // border:1px solid #ccc;
-    min-height:350px;
+    clear:both;
     margin-top:5px;
     margin-bottom:10px;
     padding:5px;
@@ -168,6 +166,7 @@ body{
       float:left;
       width:750px;
       margin-left:15px;
+      padding-bottom:20px;
       // border:1px solid #ccc;
       min-height:450px;
     }
@@ -175,17 +174,17 @@ body{
   
   // footer
   footer{
-    background-image:url('/assets/bglines.png');
+    background-image:url('/assets/background.png');
     clear:both;
-    height:50px;
+    height:40px;
     #footer{  
       height:50px;
-      background-color: rgba(0, 0, 0, 0.6);
-      color:#fff;
+      color:#666666;
       #copyright{
         font-size:11px;
         padding-top:20px;
-        margin-left:30px;
+        width:140px;
+        margin:0 auto;
       }
     }
   }

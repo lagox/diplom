@@ -39,14 +39,15 @@
           </div>
         </div>
       </header>
-      <!-- main content -->
-      <div id="main-content">
+      <!-- main content -->       
+      <div id="main-content">     
         <%= render 'layouts/sidebar' %>
-        <!-- content -->
+        <!-- content -->          
         <div id="content">
           <%= flash_msg(flash[:notice]) %>
           <%= yield %>
-        </div>
+        </div>                    
+        <div class="clear"></div>
       </div>
       <!-- footer -->
       <footer>

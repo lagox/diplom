@@ -28,7 +28,8 @@ $(document).ready(function() {
 
 // job -> fancybox
 $(document).ready(function() {
-  $(".show-job-image a").fancybox();
+  $(".show-job-image a").fancybox();       
+  $(".slides_container a").fancybox();
 });
 
 // form comment show
@@ -38,5 +39,15 @@ $(document).ready(function() {
   }, function() {
     $('#form-comment').slideUp();
   });  
+});
+
+$(document).ready(function() {
+  $("#slides").slides({
+    paginationClass: 'pagination_sl',
+    generatePagination: false,
+    preloadImage: '/assets/loading.gif',
+    play: 3000,
+    effect: 'fade'
+  });
 });
 

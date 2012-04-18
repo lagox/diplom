@@ -22,18 +22,20 @@
   </div>
   <div class="clear"></div>
   <h1 class="gallery-user-title">Работы пользователя</h1>
-  <div id="arrow-left-g">
-    <img src="/assets/arrow-left.png" alt="">
-  </div>
-  <div id="gallery-user">
-    <ul>
+  <div id="slides">
+    <div class="slides_container">
       <% @user.jobs.each do |j| %>
-        <%= image_tag(j.image_url(:thumb)) %>
-      <% end %>
-    </ul>
-  </div>
-  <div id="arrow-right-g">
-    <img src="/assets/arrow-right.png" alt="">
+      <div>
+        <%= link_to(image_tag(j.image_url(:thumb)), j.image_url) %>
+      </div>
+      <% end %>                         
+    </div>                              
+    <a href="#" class="prev">
+      <img src="/assets/arrow-prev.png" width="24" height="43" alt="Назад">
+    </a>
+    <a href="#" class="next">
+      <img src="/assets/arrow-next.png" width="24" height="43" alt="Вперед">
+    </a>
   </div>
   <div class="clear"></div>
 </div>
