@@ -405,3 +405,27 @@ form{
   	position:relative;
   	top:1px;
   }
+  
+// menu categories
+#menu-categories{   
+  // border:1px solid #ccc;
+  height:20px;
+  padding:5px 0px 5px 10px;
+  ul{                      
+    float:right;
+    li{
+      float:left;
+      margin-right:7px;     
+      border-right:1px solid #ddd;
+      padding-right:8px;
+      a{
+        color:#6C6C6C;
+        text-decoration:none;
+        font-size:11px;
+      }
+    }                    
+    li:last-child{
+      border-right:none;
+    }
+  }
+}

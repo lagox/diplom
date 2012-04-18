@@ -3,12 +3,6 @@
   <% if current_user %>
     <%= link_to "Загрузить работу", new_job_path, :class => "button-upload" %>
   <% end %>
-  <h1 class="title-category">Категории</h1>
-  <ul class="content-sidebar">
-    <% @list_categories.each do |c| %>
-      <li><%= link_to c.title, c %></li>
-    <% end %>
-  </ul>
   <h1 class="title-category">Разное</h1>
   <div class="content-sidebar">
     <ul>
