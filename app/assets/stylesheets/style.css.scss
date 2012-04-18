@@ -20,28 +20,30 @@ body{
     background-image:url('/assets/bglines.png');
   }
   #header{
-    height:80px;
-    background-color: rgba(0, 0, 0, 0.6);
+    #logo{
+      // border:1px solid #ccc;
+      // display: inline-block;
+      float:left;
+      position:relative;
+      top:20px;
+      left:30px;
+      img{
+        width:175px;
+        height:65px;
+      }
+    }
+    height:110px;
+    border-bottom:3px solid #468FB0;
+    background-color: rgba(0, 0, 0, 0.7);
     a{
       color:#fff;
     }
-    #site-title{
-      padding-top:20px;
-      margin-left:40px;
-      font-size:24px;
-      // border:1px solid #ccc;
-      a{
-        text-decoration:none;
-        &:hover{
-          color:#EBEBEB;
-        }
-      }
-    }
+
     #auth-user{
+      top:40px;
+      right:20px;
       position:relative;
       float:right;
-      bottom:25px;
-      right:10px;
       width:180px;
       #login-as{
         font-size:11px;
