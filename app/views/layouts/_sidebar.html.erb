@@ -11,5 +11,17 @@
       <li><%= link_to "Все фоторграфы", photographers_users_path %></li>
     </ul>
   </div>
+  <a href="#" class="title-category" id="live-click">Прямой эфир</a>
+  <div class="content-sidebar">
+    <ul class="live-comments">
+      <% @ten_comments.each do |c| %>
+        <li>
+          <span class="live-c-user"><%= isset_avatar(c.user.avatar_url) %><%= name_in_header(c.user) %> </span>
+          <span class="say-user-text">→</span>
+          <span class="live-job-title"><%= link_to c.job.title, c.job %></span>
+        </li>
+      <% end %>
+    </ul>
+  </div>
   
 </div>

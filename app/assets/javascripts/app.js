@@ -51,3 +51,15 @@ $(document).ready(function() {
   });
 });
 
+
+// call live comments
+$(document).ready(function() {
+  $('#live-click').toggle(function() {
+    $('.live-comments').slideDown('fast');
+    return false;
+  }, function() {
+    $('.live-comments').slideUp('fast');
+    return false;
+  });
+  
+});

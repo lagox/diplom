@@ -2,11 +2,15 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   
-  before_filter :load_categories
+  before_filter :load_categories, :load_ten_comments
   
   def load_categories
     @list_categories = Category.all
     @list_categories
+  end
+  
+  def load_ten_comments
+    @ten_comments = Comment.forlive.limit(10)
   end
   
   private
