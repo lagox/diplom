@@ -17,6 +17,9 @@ Diplom::Application.routes.draw do
   resources :categories, :except => [:index]
 
   resources :jobs do
+    member do
+      post :rate
+    end
     resources :comments  
   end
 
