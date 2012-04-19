@@ -5,8 +5,8 @@ class JobsController < ApplicationController
   before_filter :access_job, :only => [:edit, :update, :destroy]
   
   def index
-    @jobs = Job.all
-    respond_with(@jobs)
+    @job15 = Job.top
+    @newjobs = Job.limit(12)
   end
   
   def show

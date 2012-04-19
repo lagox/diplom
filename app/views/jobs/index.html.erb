@@ -1,0 +1,28 @@
+<div id="top-12-jobs">
+  <h1 class="top-12-jobs-title">
+    Топ 12 работ
+  </h1>
+  <div class="jobs-in-12">
+    <% @job15.each do |j| %>
+      <div class="one-job-top">
+      <%= link_to image_tag(j.image_url(:thumb)), j %>
+      <div class="over-description"><%= j.title %></div>
+      </div>
+    <% end %>  
+    <div class="clear"></div>
+  </div>
+</div>
+<div id="new-12-jobs">
+  <h1 class="new-12-jobs-title">
+    Новые работы
+  </h1>
+  <div class="jobs-in-12">
+    <% @newjobs.each do |j| %>
+      <div class="one-job-top">
+      <%= link_to image_tag(j.image_url(:thumb)), j %>
+      <div class="over-description"><%= j.title %></div>
+      </div>
+    <% end %>  
+    <div class="clear"></div>
+  </div>
+</div>

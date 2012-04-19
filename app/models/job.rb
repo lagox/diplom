@@ -16,18 +16,10 @@ class Job < ActiveRecord::Base
   # paginate
   paginates_per 9
   
-  ajaxful_rateable :stars => 10, :dimensions => [:all]
+  ajaxful_rateable :stars => 10, :dimensions => [:all], :cache_column => :rating_average
   
   default_scope order("created_at DESC")
-  
-  def full_rates
-    rating = 0
-    self.rates.each do |r|
-      rating += r.stars
-    end
-    return rating/2.0
-  end
-  
+  scope :top, reorder("rating_average DESC").limit(12)
 end
 # == Schema Information
 #

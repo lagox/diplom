@@ -38,4 +38,16 @@
     </a>
   </div>
   <div class="clear"></div>
+  <div id="user-jobs-profile">
+    <div class="jobs-prof">
+      <% @jobs.each do |j| %>
+        <div class="one-job-top">
+        <%= link_to image_tag(j.image_url(:thumb)), j %>
+        <div class="over-description"><%= j.title %></div>
+        </div>
+      <% end %>  
+      <div class="clear"></div>
+      <%= paginate @jobs %>
+    </div>
+  </div>
 </div>

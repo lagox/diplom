@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120419044948) do
+ActiveRecord::Schema.define(:version => 20120419112413) do
 
   create_table "categories", :force => true do |t|
     t.string "title"
@@ -29,11 +29,12 @@ ActiveRecord::Schema.define(:version => 20120419044948) do
   create_table "jobs", :force => true do |t|
     t.string   "title"
     t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                                                    :null => false
+    t.datetime "updated_at",                                                    :null => false
     t.string   "image"
     t.integer  "category_id"
     t.integer  "user_id"
+    t.decimal  "rating_average", :precision => 6, :scale => 2, :default => 0.0
   end
 
   create_table "rates", :force => true do |t|
