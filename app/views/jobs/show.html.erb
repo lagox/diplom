@@ -4,10 +4,16 @@
     <div class="show-over-description"><%= @job.title %></div>
   </div>
   <div class="show-job-desc">
-    <%= @job.description %>
+    <div>
+      <%= @job.description %>  
+    </div>
     <div class="show-job-author">
       <b>Автор: <%= name_in_header(@job.user) %></b>
     </div>
+    <a href="#job-com-a" id="jumb-to-comment" class="show-count-comment">
+      <%= @job.comments.size %>
+    </a>
+    <div class="clear"></div>
   </div>
   <% if current_user %>
     <% if owner_job?(current_user, @job) %>
@@ -17,8 +23,13 @@
       </div>
     <% end %>
   <% end %>
+  <div class="job-rate" data-id-job="<%= @job.id %>">
+    <h1 class="title-rating">Рейтинг: (<%= @job.full_rates %>)</h1>
+    <%= render 'rating' %>
+    <div class="clear"></div>    
+  </div>
   Комментарии:
-  <div class="job-comments">
+  <div id="job-com-a" class="job-comments">
     <%= render(@job.comments) %>
   </div>  
   <%= render :partial => "shared/comment_form" %>

@@ -41,7 +41,25 @@
     width:670px;
     margin:20px auto 10px auto;
    .show-job-author{
+      float:left;
       margin-top:10px;
+    }
+    .show-count-comment{
+      -webkit-border-radius:5px;
+      -moz-border-radius:5px;
+      border-radius:5px;
+      -o-border-radius:5px;
+      padding-top:4px;
+      padding-left:10px;
+      float:right;
+      margin-right:10px;
+      background:url('/assets/comment-icon.png') no-repeat 80% 50%;
+      font-size:13px;
+      width:50px;
+      height:20px;
+      background-color:#EEEEEE;
+      color:#5C5C5C;
+      text-decoration:none;
     }
   }
 }
@@ -100,4 +118,24 @@
 }
 .link_to_comment{
   margin-left:10px;
+}
+.title-rating{
+  font-size:16px;
+  margin-bottom:10px;
+  margin-right:50px;
+}
+.ajaxful-rating-wrapper{
+  margin-top:10px;
+  width:200px;
+}
+.job-rate{
+  border:1px solid #eee;
+  margin-bottom:20px;
+  margin-top:20px;
+  padding:10px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  -o-border-radius:5px;
+  background:#fcfcfc;
 }

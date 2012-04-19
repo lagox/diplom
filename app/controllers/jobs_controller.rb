@@ -52,4 +52,13 @@ class JobsController < ApplicationController
     redirect_to(jobs_path, notice: "Работа успешно удалена")
   end
   
+  # rating
+  def rate
+    @job = Job.find(params[:id])
+    @job.rate(params[:stars], current_user, params[:dimension])
+    respond_to do |format|
+      format.js
+    end
+  end
+  
 end

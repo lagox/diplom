@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/edgarjs/ajaxful-rating.git
+  revision: 8a80ae76be2dd304f2e7ec991af7daca205bc501
+  branch: rails3
+  specs:
+    ajaxful_rating (3.0.0.beta8)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -168,6 +175,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ajaxful_rating!
   annotate (~> 2.4.1.beta)
   awesome_print (~> 1.0.2)
   bcrypt-ruby (~> 3.0.0)
