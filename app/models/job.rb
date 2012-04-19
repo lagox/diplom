@@ -14,7 +14,7 @@ class Job < ActiveRecord::Base
   mount_uploader :image, ImageUploader
   
   # paginate
-  paginates_per 9
+  paginates_per 12
   
   ajaxful_rateable :stars => 10, :dimensions => [:all], :cache_column => :rating_average
   

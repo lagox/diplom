@@ -27,7 +27,10 @@
     <% end %>
   <% end %>
   <div class="job-rate" data-id-job="<%= @job.id %>">
-    <h1 class="title-rating">Рейтинг: (<%= @job.rating_average %>)</h1>
+    <h1 class="title-rating">
+      Рейтинг: 
+      (<%= number_with_precision(@job.rating_average, :precision => 1) %>)
+    </h1>
     <%= render 'rating' %>
     <div class="clear"></div>    
   </div>

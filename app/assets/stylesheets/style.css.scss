@@ -223,6 +223,7 @@ body{
   padding:5px;
   border:1px solid #CCF9A4;
   background:#FCFCFC;
+  margin-bottom:20px;
 }
 .alert-error{
   color:#CC6859;
@@ -230,6 +231,7 @@ body{
   padding:5px;
   border:1px solid #F1B297;
   background:#FCFCFC;
+  margin-bottom:20px;
 }
 // errors:
 .errorExplanation{
@@ -522,6 +524,12 @@ form{
   // border:1px solid #eee;
   padding:5px;
   .top-12-jobs-title{
+    background:#eee !important;
+    color:#000 !important;
+    &:hover{
+      background:#6F6F6F !important;
+      color:#eee !important;
+    }
     @include title-main;
   }
 }
