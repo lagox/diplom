@@ -7,6 +7,9 @@
     <div>
       <%= @job.description %>  
     </div>
+    <div class="category-job-show">
+      <b>Категория: <%= link_to(@job.category.title, @job.category) %></b>
+    </div>
     <div class="show-job-author">
       <b>Автор: <%= name_in_header(@job.user) %></b>
     </div>
@@ -27,6 +30,10 @@
     <h1 class="title-rating">Рейтинг: (<%= @job.rating_average %>)</h1>
     <%= render 'rating' %>
     <div class="clear"></div>    
+  </div>
+  <div id="share-network">
+    <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+    <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="icon" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir,lj,gplus"></div> 
   </div>
   Комментарии:
   <div id="job-com-a" class="job-comments">
