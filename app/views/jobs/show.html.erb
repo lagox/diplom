@@ -17,6 +17,11 @@
       </div>
     <% end %>
   <% end %>
+  <div id="job-rate">
+    <h1 class="title-rating">Рейтинг:</h1>
+    <%= render 'rating' %>
+    <div class="clear"></div>    
+  </div>
   Комментарии:
   <div class="job-comments">
     <%= render(@job.comments) %>

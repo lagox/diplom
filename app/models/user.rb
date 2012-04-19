@@ -17,6 +17,8 @@ class User < ActiveRecord::Base
   scope :photo, where(:typeuser => "photo")
   scope :design, where(:typeuser => "design")
   
+  ajaxful_rater
+  
   def self.typeusers_options
     {
       "Дизайнер" => "design",

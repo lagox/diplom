@@ -16,6 +16,8 @@ class Job < ActiveRecord::Base
   # paginate
   paginates_per 9
   
+  ajaxful_rateable :stars => 10, :dimensions => [:all]
+  
   default_scope order("created_at DESC")
   
 end
