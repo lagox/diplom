@@ -20,6 +20,14 @@ class Job < ActiveRecord::Base
   
   default_scope order("created_at DESC")
   
+  def full_rates
+    rating = 0
+    self.rates.each do |r|
+      rating += r.stars
+    end
+    return rating/2.0
+  end
+  
 end
 # == Schema Information
 #
