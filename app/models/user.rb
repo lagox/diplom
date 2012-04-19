@@ -19,6 +19,12 @@ class User < ActiveRecord::Base
   
   ajaxful_rater
   
+  def self.topusers
+    users = User.joins(:jobs)
+    
+  end
+  
+  
   def self.typeusers_options
     {
       "Дизайнер" => "design",

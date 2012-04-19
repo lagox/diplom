@@ -13,6 +13,10 @@ class ApplicationController < ActionController::Base
     @ten_comments = Comment.forlive.limit(10)
   end
   
+  def load_ten_user
+    @tentopusers = User.fortopten
+  end
+  
   private
   
     def current_user
