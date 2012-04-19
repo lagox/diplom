@@ -22,6 +22,9 @@ Diplom::Application.routes.draw do
     end
     resources :comments  
   end
+  
+  get 'contacts', to: 'pages#contacts', as: 'contacts'
+  get 'about', to: 'pages#about', as: 'about'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

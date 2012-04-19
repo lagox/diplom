@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateRates < ActiveRecord::Migration
   def self.up
     create_table :rates do |t|

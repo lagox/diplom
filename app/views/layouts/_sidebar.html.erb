@@ -3,12 +3,18 @@
   <% if current_user %>
     <%= link_to "Загрузить работу", new_job_path, :class => "button-upload" %>
   <% end %>
-  <h1 class="title-category">Разное</h1>
+  <h1 class="title-category">Пользователи</h1>
   <div class="content-sidebar">
     <ul>
-      <li><%= link_to "Все пользователи", users_path %></li>
+      <li><%= link_to "Все", users_path %></li>
       <li><%= link_to "Все дизайнеры", designers_users_path %></li>
       <li><%= link_to "Все фоторграфы", photographers_users_path %></li>
+    </ul>
+  </div>
+  <div class="content-sidebar">
+    <ul>
+      <li><%= link_to "О нас", about_path %></li>
+      <li><%= link_to "Контакты", contacts_path %></li>
     </ul>
   </div>
   <a href="#" class="title-category" id="live-click">Прямой эфир</a>
