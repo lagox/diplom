@@ -47,8 +47,13 @@
         </ul>
         <div class="clear"></div>
       </div>
-      <div id="toptenusers">
-        sss
+      <div id="randomusers">
+        <ul>
+          <% @randoms.each do |r| %>
+            <li><%= link_to(isset_avatar(r.avatar_url(:thumb)), r) %></li>
+          <% end %>
+        </ul>
+        <div class="clear"></div>
       </div>
       <!-- main content -->       
       <div id="main-content">     

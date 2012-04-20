@@ -2,8 +2,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   
-  before_filter :load_categories, :load_ten_comments
-  
+  before_filter :load_categories, :load_ten_comments, :load_random_users
   def load_categories
     @list_categories = Category.all
     @list_categories
@@ -13,8 +12,8 @@ class ApplicationController < ActionController::Base
     @ten_comments = Comment.forlive.limit(10)
   end
   
-  def load_ten_user
-    @tentopusers = User.fortopten
+  def load_random_users
+    @randoms = User.random
   end
   
   private

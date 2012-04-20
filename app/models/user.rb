@@ -19,9 +19,8 @@ class User < ActiveRecord::Base
   
   ajaxful_rater
   
-  def self.topusers
-    users = User.joins(:jobs)
-    
+  def self.random
+    find(:all).sample(15)
   end
   
   
