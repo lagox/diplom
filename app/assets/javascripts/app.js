@@ -46,8 +46,7 @@ $(document).ready(function() {
     paginationClass: 'pagination_sl',
     generatePagination: false,
     preloadImage: '/assets/loading.gif',
-    play: 3000,
-    effect: 'fade'
+    play: 3000
   });
 });
 
