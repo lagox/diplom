@@ -50,7 +50,9 @@
       <div id="randomusers">
         <ul>
           <% @randoms.each do |r| %>
-            <li><%= link_to(isset_avatar(r.avatar_url(:thumb)), r) %></li>
+            <li>
+              <%= link_to(isset_avatar(r.avatar_url(:thumb)), r) %>
+            </li>
           <% end %>
         </ul>
         <div class="clear"></div>
