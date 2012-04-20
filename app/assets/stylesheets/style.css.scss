@@ -602,3 +602,10 @@ form{
     }
   }
 }
+.bwWrapper{
+    position:relative;
+    display:block;
+    canvas{
+      width:50%;  
+    }
+}

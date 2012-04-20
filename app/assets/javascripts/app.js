@@ -62,3 +62,10 @@ $(document).ready(function() {
   });
   
 });
+
+$(document).ready(function(){
+    $('.bwWrapper').BlackAndWhite({
+        hoverEffect : true, // default true
+        webworkerPath: false
+    });
+});

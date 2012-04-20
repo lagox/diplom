@@ -51,7 +51,7 @@
         <ul>
           <% @randoms.each do |r| %>
             <li>
-              <%= link_to(isset_avatar(r.avatar_url(:thumb)), r) %>
+              <%= link_to(isset_avatar(r.avatar_url(:thumb)), r, :class => 'bwWrapper') %>
             </li>
           <% end %>
         </ul>
