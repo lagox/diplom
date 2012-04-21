@@ -35,7 +35,6 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the web server
 gem 'unicorn'
-gem 'rails_admin'
 
 # Deploy with Capistrano
 gem 'capistrano'
@@ -56,5 +55,3 @@ group :development, :test do
   gem 'turn', '~> 0.8.3', :require => false
   gem 'simplecov', :require => false
 end
-
-gem "devise"

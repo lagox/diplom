@@ -1,8 +1,6 @@
 # -*- encoding : utf-8 -*-
 Diplom::Application.routes.draw do
 
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-
   get 'signup', to: 'users#new', as: 'signup'
   get 'logout', to: 'sessions#destroy', as: 'logout'
   get 'settings', to: 'users#settings', as: 'settings'
