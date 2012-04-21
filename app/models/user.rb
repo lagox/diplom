@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
   ajaxful_rater
   
   def self.random
-    find(:all).sample(15)
+    find(:all).sample(13)
   end
   
   
