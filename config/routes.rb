@@ -1,6 +1,18 @@
 # -*- encoding : utf-8 -*-
 Diplom::Application.routes.draw do
 
+  # admin interface
+  namespace :admin do
+    resources :users do
+      resources :jobs
+    end
+    
+    resources :jobs do
+      resources :comments
+    end
+    resources :categories
+  end
+
   get 'signup', to: 'users#new', as: 'signup'
   get 'logout', to: 'sessions#destroy', as: 'logout'
   get 'settings', to: 'users#settings', as: 'settings'

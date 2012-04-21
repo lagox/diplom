@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   has_secure_password
   
   attr_accessible :email, :password, :password_confirmation,
-    :name, :description, :avatar, :typeuser
+    :name, :description, :avatar, :typeuser, :remote_avatar_url, :remove_avatar, :avatar_cache, :rating, :originalrating
   
   validates :email, :uniqueness => true
   
