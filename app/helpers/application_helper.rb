@@ -48,6 +48,16 @@ module ApplicationHelper
     end
   end
   
+  def name_in_title(object)
+    name = object.name
+    email = object.email
+    if name.nil?
+      email
+    else
+      name
+    end
+  end
+  
   def owner_job?(user, job)
     true if job.user_id == user.id
   end
