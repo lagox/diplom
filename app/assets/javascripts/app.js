@@ -63,9 +63,9 @@ $(document).ready(function() {
   
 });
 
-
-
-$(document).ready(function() {
+// black and white
+$(window).load(function(){
+  
   // clone image
    $('#randomusers ul li a img').each(function(){
        var el = $(this);
@@ -76,11 +76,6 @@ $(document).ready(function() {
        });
        this.src = grayscale(this.src);
    });
-});
-
-
-// black and white
-$(window).load(function(){
 
     // Fade in images so there isn't a color "pop" document load and then on window load
     $("#randomusers ul li a img").fadeIn(200);
