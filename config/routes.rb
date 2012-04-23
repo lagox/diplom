@@ -11,6 +11,8 @@ Diplom::Application.routes.draw do
     resources :comments
     resources :categories
   end
+  
+  resources :search
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'logout', to: 'sessions#destroy', as: 'logout'

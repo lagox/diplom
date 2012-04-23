@@ -20,6 +20,17 @@ class Job < ActiveRecord::Base
   
   default_scope order("created_at DESC")
   scope :top, reorder("rating_average DESC").limit(12)
+  
+  def self.search(search)
+    if search
+      word = '%'+search+'%'
+      text_conditions = "SELECT * FROM jobs WHERE title LIKE ? or description LIKE ?"
+      conditions = [text_conditions, word, word]
+      Job.find_by_sql(conditions)
+    else
+      find(:all)
+    end
+  end
 end
 # == Schema Information
 #

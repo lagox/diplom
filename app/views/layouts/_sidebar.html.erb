@@ -3,6 +3,17 @@
   <% if current_user %>
     <%= link_to "Загрузить работу", new_job_path, :class => "button-upload" %>
   <% end %>
+  <h1 class="title-category">Поиск</h1>
+  <div class="content-sidebar">
+    <div id="search-form-in-sidebar">
+      <%= form_tag search_index_path, :method => 'get' do %>
+        <p>
+          <%= text_field_tag :search, params[:search] %>
+          <%= submit_tag "Поиск", :name => nil %>
+        </p>
+      <% end %>
+    </div>
+  </div>
   <h1 class="title-category">Пользователи</h1>
   <div class="content-sidebar">
     <ul>
