@@ -609,6 +609,8 @@ form{
   form{
     input[type='text']{
       width:120px;
+      border:1px solid #ccc;
+      height:17px;
     }
     input[type='submit']{
       margin:0px 5px 20px 0px;
