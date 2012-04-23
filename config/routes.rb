@@ -7,9 +7,8 @@ Diplom::Application.routes.draw do
       resources :jobs
     end
     
-    resources :jobs do
-      resources :comments
-    end
+    resources :jobs
+    resources :comments
     resources :categories
   end
 
