@@ -9,7 +9,9 @@ Diplom::Application.routes.draw do
     
     resources :jobs
     resources :comments
-    resources :categories
+    resources :categories do
+      resources :jobs
+    end
   end
   
   resources :search

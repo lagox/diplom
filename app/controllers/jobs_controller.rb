@@ -30,7 +30,7 @@ class JobsController < ApplicationController
     @job = Job.new(params[:job])
     if @job.save
       flash[:notice] = "Работа успешно создана"
-      respond_with(@job, location: root_path)
+      respond_with(@job, location: job_path(@job))
     else
       render 'new'
     end
@@ -40,7 +40,7 @@ class JobsController < ApplicationController
     @job = Job.find(params[:id])
     if @job.update_attributes(params[:job])
       flash[:notice] = "Работа успешно обновлена"
-      respond_with(@job, location: @job)
+      respond_with(@job, location: job_path(@job))
     else
       render 'edit'
     end
