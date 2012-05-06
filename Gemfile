@@ -44,7 +44,7 @@ gem 'ajaxful_rating', :git => 'git://github.com/edgarjs/ajaxful-rating.git', :br
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
-group :development, :test do
+group :development do
   gem "awesome_print", "~> 1.0.2"
   gem 'spork', '0.9.0.rc9'
   gem "rspec", "~> 2.8.0"
