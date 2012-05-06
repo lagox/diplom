@@ -1,0 +1,46 @@
+<div id="show-job">
+  <div class="show-job-image">
+    <%= link_to(image_tag(@job.image_url), @job.image_url) %>
+    <div class="show-over-description"><%= @job.title %></div>
+  </div>
+  <div class="show-job-desc">
+    <div>
+      <%= @job.description %>  
+    </div>
+    <div class="category-job-show">
+      <b>Категория: <%= link_to(@job.category.title, @job.category) %></b>
+    </div>
+    <div class="show-job-author">
+      <b>Автор: <%= name_in_header(@job.user) %></b>
+    </div>
+    <a href="#job-com-a" id="jumb-to-comment" class="show-count-comment">
+      <%= @job.comments.size %>
+    </a>
+    <div class="clear"></div>
+  </div>
+  <% if current_user %>
+    <% if owner_job?(current_user, @job) %>
+      <div class="actions-with-job">
+        <%= link_to "Редактировать", edit_job_path(@job) %>
+        <%= link_to "Удалить", @job, :method => :delete, :confirm => "Вы уверены?" %>
+      </div>
+    <% end %>
+  <% end %>
+  <div class="job-rate" data-id-job="<%= @job.id %>">
+    <h1 class="title-rating">
+      Рейтинг: 
+      (<%= number_with_precision(@job.rating_average, :precision => 1) %>)
+    </h1>
+    <%= render 'rating' %>
+    <div class="clear"></div>    
+  </div>
+  <div id="share-network">
+    <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+    <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="icon" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir,lj,gplus"></div> 
+  </div>
+  Комментарии:
+  <div id="job-com-a" class="job-comments">
+    <%= render(@job.comments) %>
+  </div>  
+  <%= render :partial => "shared/comment_form" %>
+</div>

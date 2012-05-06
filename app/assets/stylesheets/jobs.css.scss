@@ -1,0 +1,147 @@
+#show-job{
+  // border:1px solid #ccc;
+  margin-top:10px;
+  margin-bottom:20px;
+  .show-job-title{
+    font-size:20px;
+    text-align:center;
+    margin-bottom:10px;
+  }
+  .show-job-image{
+    position:relative;
+    margin-left:80px;
+    img{
+      -webkit-border-radius:5px;
+      -moz-border-radius:5px;
+      border-radius:5px;
+      -o-border-radius:5px;
+      border:1px solid #6A6A6A;
+      width:600px;
+      height:400px;
+    }
+    .show-over-description{
+      position:absolute;
+      bottom:35px;
+      width:420px;
+      min-height:40px;
+      left:0;
+      font-size:22px;
+      background: rgb(0, 0, 0); /* fallback color */
+      background: rgba(0, 0, 0, 0.8);
+      padding:15px 5px 5px 15px;
+      color:#fff;
+      &:hover{
+        background: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+  .show-job-desc{
+    font-size:11px;
+    padding:5px;
+    width:670px;
+    margin:20px auto 10px auto;
+   .show-job-author{
+      float:left;
+      margin-top:10px;
+    }
+    .show-count-comment{
+      -webkit-border-radius:5px;
+      -moz-border-radius:5px;
+      border-radius:5px;
+      -o-border-radius:5px;
+      padding-top:4px;
+      padding-left:10px;
+      float:right;
+      margin-right:10px;
+      background:url('/assets/comment-icon.png') no-repeat 80% 50%;
+      font-size:13px;
+      width:50px;
+      height:20px;
+      background-color:#EEEEEE;
+      color:#5C5C5C;
+      text-decoration:none;
+    }
+  }
+}
+.actions-with-job{
+  text-align:right;
+  font-size:11px;
+}
+.job-comments{
+  margin:10px 0px 20px 10px;
+  .one-job-comment{
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    -o-border-radius:5px;
+    border-bottom:1px solid #eee;
+    margin-bottom:7px;
+    padding:5px;
+    &:hover{
+      background:#F2F2F2;
+    }
+    .text-comment{
+      font-size:12px;
+      margin:5px 2px 3px 5px;
+      float:left;
+    }
+    .name-user-comment{
+      a{
+        text-decoration:none;
+        &:hover{
+          text-decoration:underline;
+        }
+      }
+      font-size:10px;
+      margin-bottom:3px;
+      .comment-date{
+        font-size:8px;
+      }
+    }
+    .avatar-comment{
+      float:left;
+      a{
+        &:hover{
+          opacity:0.7;
+        }
+      }
+      img{
+        -webkit-border-radius:5px;
+        -moz-border-radius:5px;
+        border-radius:5px;
+        -o-border-radius:5px;       
+        width:32px;
+        height:32px;
+      }
+    }
+  }
+}
+.link_to_comment{
+  margin-left:10px;
+}
+.title-rating{
+  font-size:16px;
+  margin-bottom:10px;
+  margin-right:50px;
+}
+.ajaxful-rating-wrapper{
+  margin-top:10px;
+  width:200px;
+}
+.job-rate{
+  border:1px solid #eee;
+  margin-bottom:20px;
+  margin-top:20px;
+  padding:10px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  -o-border-radius:5px;
+  background:#fcfcfc;
+}
+#share-network{
+  margin:10px 0px;
+}
+.category-job-show{
+  margin-top:10px;
+}

@@ -1,14 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Diplom</title>
+  <title><%= title %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
-</body>
+  <div id="main-wrapper">
+    <div id="wrapper">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <div id="logo">
+            <%= link_to image_tag('original_logo.png'), root_path %>
+          </div>
+          <div id="auth-user">
+            <% if current_user %>
+              <div id="login-as">
+                <span>
+                  Вы вошли как: <%= name_in_header(current_user) %>
+                </span>
+                <div id="logout-button">
+                  <%= link_to "Настройки", settings_path %> | 
+                  <%= link_to "Выход", logout_path %>
+                </div>
+              </div>
+            <% else %>
+              <%= link_to "Регистрация", new_user_path, :id => 'signup-link' %>
+              <a href="#" id="login-link">Войти</a>
+              <%= form_tag sessions_path do %>
+                <%= text_field_tag :email, nil, :class => 'a-username',
+                    :placeholder => 'логин' %>
+                <%= password_field_tag :password, nil, :class => 'a-password', :placeholder => 'пароль' %>
+                <%= submit_tag "Войти", :class => 'a-subit' %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </header>   
+      <div id="menu-categories">
+        <ul>
+          <% @list_categories.each do |c| %>
+            <li><%= link_to c.title, c %></li>
+          <% end %>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <div id="randomusers">
+        <ul>
+          <% @randoms.each do |r| %>
+            <li>
+              <%= link_to(isset_avatar(r.avatar_url(:thumb)), r, :title => name_in_title(r)) %>
+            </li>
+          <% end %>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <!-- main content -->       
+      <div id="main-content">     
+        <%= render 'layouts/sidebar' %>
+        <!-- content -->          
+        <div id="content">
+          <%= flash_msg(flash[:notice]) %>
+          <%= yield %>
+        </div>                    
+        <div class="clear"></div>
+      </div>
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <div id="copyright">&copy 2012. Кусаинов Ерлан</div>
+          <div id="menu-footer">
+            <ul>
+              <li><%= link_to "Все пользователи", users_path %></li>
+              <li><%= link_to "Дизайнеры", designers_users_path %></li>
+              <li><%= link_to "Фотографы", photographers_users_path %></li>
+              <li><%= link_to "О нас", about_path %></li>
+              <li><%= link_to "Контакты", contacts_path %></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+        </div>  
+      </footer>
+    </div>
+  </div>
+  </body>
 </html>

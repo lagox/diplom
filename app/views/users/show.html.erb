@@ -1,0 +1,57 @@
+<div id="show-user">
+  <div class="profile-avatar">
+    <%= isset_avatar(@user.avatar_url) %>
+  </div>
+  <% unless @user.name.nil? %>
+    <div class="name-user">
+      <%= @user.name %>
+    </div>  
+  <% end %>
+  <div class="typeuser-user">
+    <%= type_user(@user) %>
+  </div>
+  <div class="email-user">
+    e-mail: <%= @user.email %>
+  </div>
+  <div class="created-at-user">
+    Дата регистрации: <%= @user.created_at.to_date %>
+  </div>
+  <div class="description-user">
+    <h2 class="description-user-title">О себе:</h2>
+    <%= description_user(@user)%>
+  </div>
+  <div class="clear"></div>
+  <div id="share-network">
+    <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+    <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="icon" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir,lj,gplus"></div> 
+  </div>
+  <h1 class="gallery-user-title">Работы пользователя</h1>
+  <div id="slides">
+    <div class="slides_container">
+      <% @user.jobs.each do |j| %>
+      <div>
+        <%= link_to(image_tag(j.image_url(:thumb)), j.image_url) %>
+      </div>
+      <% end %>                         
+    </div>                              
+    <a href="#" class="prev">
+      <img src="/assets/arrow-prev.png" width="24" height="43" alt="Назад">
+    </a>
+    <a href="#" class="next">
+      <img src="/assets/arrow-next.png" width="24" height="43" alt="Вперед">
+    </a>
+  </div>
+  <div class="clear"></div>
+  <div id="user-jobs-profile">
+    <div class="jobs-prof">
+      <% @jobs.each do |j| %>
+        <div class="one-job-top">
+        <%= link_to image_tag(j.image_url(:thumb)), j %>
+        <div class="over-description"><%= j.title %></div>
+        </div>
+      <% end %>  
+      <div class="clear"></div>
+      <%= paginate @jobs %>
+    </div>
+  </div>
+</div>

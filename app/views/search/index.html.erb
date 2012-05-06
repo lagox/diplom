@@ -1,0 +1,14 @@
+<h1 class="search-title-result">
+  Результаты поиска:
+</h1>
+<div class="jobs-in-category">
+  <% @jobs.each do |j| %>
+    <div class="one-job-category">
+    <%= link_to image_tag(j.image_url(:thumb)), j %>
+    <div class="over-description"><%= j.title %></div>
+    </div>
+  <% end %>  
+  <div class="clear"></div>
+</div>
+<%= paginate @jobs %>
+

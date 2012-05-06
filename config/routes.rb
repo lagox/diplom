@@ -1,4 +1,46 @@
+# -*- encoding : utf-8 -*-
 Diplom::Application.routes.draw do
+
+  # admin interface
+  namespace :admin do
+    resources :users do
+      resources :jobs
+    end
+    
+    resources :jobs
+    resources :comments
+    resources :categories do
+      resources :jobs
+    end
+  end
+  
+  resources :search
+
+  get 'signup', to: 'users#new', as: 'signup'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
+  get 'settings', to: 'users#settings', as: 'settings'
+  
+  resources :users do
+    collection do
+      get 'photographers', as: 'photographers'
+      get 'designers', as: 'designers'
+    end
+  end
+  
+  resources :sessions
+
+  resources :categories, :except => [:index]
+
+  resources :jobs do
+    member do
+      post :rate
+    end
+    resources :comments  
+  end
+  
+  get 'contacts', to: 'pages#contacts', as: 'contacts'
+  get 'about', to: 'pages#about', as: 'about'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +90,7 @@ Diplom::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'jobs#index'
 
   # See how all your routes lay out with "rake routes"
 

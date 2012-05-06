@@ -1,0 +1,60 @@
+#category-description{
+  margin-top:5px;
+  margin-bottom:10px;
+  // text-shadow: 0px 1px 0px #e5e5ee; 
+  font:11px/1.4 "myriad-pro-1","myriad-pro-2","Lucida Grande",Sans-Serif;
+  h1{
+    font-size:20px;
+    // border:1px solid #ccc;
+    display: inline-block;
+    &:hover{
+      cursor:pointer;
+      color:#747474;
+    }
+  }
+  .hide-description{
+    margin-top:10px;
+    font-size:12px;
+    line-height:20px;
+    color:#818181;
+    padding:15px;
+    width:680px;
+    // border:1px solid #ccc;
+    display:none;
+    font-style:italic;
+  }
+}
+.jobs-in-category{
+  // border:1px solid #ccc;
+  .one-job-category{
+    width:230px;
+    float:left;
+    position:relative;
+    margin-right:10px;
+    margin-top:10px;
+    a{
+      img{
+        width:230px;
+        height:170px;
+        &:hover{
+          opacity:0.8;
+        }
+      }
+    }  
+    .over-description{
+      position:absolute;
+      top:135px;
+      width:220px;
+      min-height:20px;
+      left:0;
+      font-size:11px;
+      background: rgb(0, 0, 0); /* fallback color */
+      background: rgba(0, 0, 0, 0.7);
+      padding:10px 5px 5px 5px;
+      color:#fff;
+      &:hover{
+        background: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}

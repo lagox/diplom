@@ -1,0 +1,44 @@
+<!-- sidebar -->
+<div id="sidebar">
+  <% if current_user %>
+    <%= link_to "Загрузить работу", new_job_path, :class => "button-upload" %>
+  <% end %>
+  <h1 class="title-category">Поиск</h1>
+  <div class="content-sidebar">
+    <div id="search-form-in-sidebar">
+      <%= form_tag search_index_path, :method => 'get' do %>
+        <p>
+          <%= text_field_tag :search, params[:search] %>
+          <%= submit_tag "Поиск", :name => nil %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+  <h1 class="title-category">Пользователи</h1>
+  <div class="content-sidebar">
+    <ul>
+      <li><%= link_to "Все", users_path %></li>
+      <li><%= link_to "Дизайнеры", designers_users_path %></li>
+      <li><%= link_to "Фотографы", photographers_users_path %></li>
+    </ul>
+  </div>
+  <div class="content-sidebar">
+    <ul>
+      <li><%= link_to "О нас", about_path %></li>
+      <li><%= link_to "Контакты", contacts_path %></li>
+    </ul>
+  </div>
+  <a href="#" class="title-category" id="live-click">Прямой эфир</a>
+  <div class="content-sidebar">
+    <ul class="live-comments">
+      <% @ten_comments.each do |c| %>
+        <li>
+          <span class="live-c-user"><%= isset_avatar(c.user.avatar_url) %><%= name_in_header(c.user) %> </span>
+          <span class="say-user-text">→</span>
+          <span class="live-job-title"><%= link_to c.job.title, job_path(c.job, :anchor => "comment_#{c.id.to_s}")%></span>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div style="width:200px" id="__ss_37083"> <strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/seilamgoh/what-is-design-37083" title="What is Design" target="_blank">What is Design</a></strong> <iframe src="http://www.slideshare.net/slideshow/embed_code/37083" width="200" height="160" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> </div>
+</div>
