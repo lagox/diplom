@@ -8,8 +8,8 @@ set :use_sudo, false
 set :deploy_to, "/home/#{user}/projects/#{application}"
 set :keep_releases, 5
 set :unicorn_rails, "/var/lib/gems/1.8/bin/unicorn_rails"
-set :unicorn_conf, "/etc/unicorn/#{application}.obl-reklama.rb"
-set :unicorn_pid, "/var/run/unicorn/#{application}.obl-reklama.pid"
+set :unicorn_conf, "/etc/unicorn/#{application}.lagox.rb"
+set :unicorn_pid, "/var/run/unicorn/#{application}.lagox.pid"
 set :unicorn_start_cmd, "(cd #{deploy_to}/current; rvm use 1.9.3 do bundle exec unicorn_rails -Dc #{unicorn_conf})"
 
 role :web, "lithium.locum.ru"
