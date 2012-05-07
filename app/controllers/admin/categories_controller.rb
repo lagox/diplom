@@ -1,6 +1,5 @@
 # -*- encoding : utf-8 -*-
 class Admin::CategoriesController < Puffer::Base
-
   setup do
     group "Категории"
     model_name :category
