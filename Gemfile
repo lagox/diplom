@@ -36,7 +36,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the web server
 gem 'unicorn'
-gem "puffer"
+gem "puffer", :git => "git://github.com/puffer/puffer.git"
 
 
 # Deploy with Capistrano
