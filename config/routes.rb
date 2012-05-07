@@ -1,6 +1,10 @@
 # -*- encoding : utf-8 -*-
 Diplom::Application.routes.draw do
 
+  namespace :admin do
+    resources :puffer_users
+  end
+
   # admin interface
   namespace :admin do
     resources :users do

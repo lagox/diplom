@@ -39,6 +39,7 @@ gem 'unicorn'
 gem "puffer"
 
 
+
 # Deploy with Capistrano
 gem 'capistrano'
 gem 'ajaxful_rating', :git => 'git://github.com/edgarjs/ajaxful-rating.git', :branch => "rails3"
