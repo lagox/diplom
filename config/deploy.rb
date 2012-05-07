@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 set :application, "restyle"
 set :scm, :git
 set :repository,  "git://github.com/lagox/diplom.git"
